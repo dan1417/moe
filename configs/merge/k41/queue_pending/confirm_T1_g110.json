@@ -1,0 +1,3 @@
+{"kind": "plugin", "module": "confirm41", "label": "T1_g110", "priority": 28,
+ "runs": [{"competition": "code", "sample": "tag:A", "limit": 3000},
+          {"competition": "math", "sample": "tag:A", "limit": 3000}]}

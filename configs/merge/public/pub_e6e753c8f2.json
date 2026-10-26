@@ -1,0 +1,15 @@
+{
+ "label": "pub_e6e753c8f2",
+ "description": "probe: C10_S50 + 0.0389\u00b7(M34 - C10_S50) = toward M34 | M34 = MAIN #34 teutonic-II-110B-A7B-5DALwjE4-79",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.9611
+  },
+  {
+   "model": "/data/teutonic/models/ac1b2e17e4807965db311a7a7757d188bb441c56bd15e08b743751724a8f326f",
+   "coef": 0.0389
+  }
+ ]
+}

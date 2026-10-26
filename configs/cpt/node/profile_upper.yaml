@@ -1,0 +1,34 @@
+# Throughput/memory profile of the upper-layer recipe (layers 16-44 + lm_head + final norm trainable) on this
+# node: 6 steps from the start body, no val, no exports; torch.profiler traces steps 2-3.
+#   bash scripts/train/node_train.sh configs/cpt/node/profile_upper.yaml --profile-dir /workspace/teutonic/runs/profile_upper/prof
+king_dir: /dev/shm/teutonic/start
+output_dir: /workspace/teutonic/runs/profile_upper
+export_dir: /mnt/ram/runs/profile_upper/exports
+export_final: false
+seed: 0
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 3.0e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.333}
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule: {total_steps: 6, warmup_steps: 2, decay_steps: 2, min_lr_ratio: 0.0}
+ema: {enabled: true, decay: 0.99, every: 5}
+data:
+  pool_dir: /workspace/teutonic/pools/val_div      # profile only: any pool works
+  micro_batch: 8
+  grad_accum: 2
+  seed: 0
+log_every: 1
+eval_every: 100000
+export_every: 0
+checkpoint: {every: 0, keep: 1, resume: false}

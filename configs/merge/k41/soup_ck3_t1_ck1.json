@@ -1,0 +1,100 @@
+{
+ "label": "soup_ck3_t1_ck1",
+ "description": "plain soup: 0.6\u00b7#42 + 0.2\u00b7TEXT king + 0.2\u00b7our CODE king",
+ "method": "soup",
+ "vec_spec": "0 + 0.6\u00b7CK3 + 0.2\u00b7T1 + 0.2\u00b7CK1",
+ "vecs": {
+  "CK3": 0.6,
+  "T1": 0.2,
+  "CK1": 0.2
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.2
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 0.6
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.2
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -8.5e-05,
+    "se": 3.58e-05,
+    "lcb": -0.000195,
+    "lcb30k": -0.000113
+   },
+   "code": {
+    "mu": 0.000302,
+    "se": 5.13e-05,
+    "lcb": 0.000144,
+    "lcb30k": 0.000265
+   },
+   "text": {
+    "mu": 0.001384,
+    "se": 8.37e-05,
+    "lcb": 0.001125,
+    "lcb30k": 0.001331
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -8.3e-05,
+   "lcb": -0.00028,
+   "se": 6.4e-05,
+   "sources": {
+    "code-reasoning": -8.1e-05,
+    "math-reasoning": -0.000265,
+    "pretrain-behaviors": -0.000291,
+    "sft-reasoning": 0.000172,
+    "txt360-v2": 0.000465
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001672,
+    "math": 0.000956,
+    "text": 0.001414
+   },
+   "CK3_b41": {
+    "code": -0.000257,
+    "math": -0.000129,
+    "text": 0.000297
+   },
+   "t1_d3605": {
+    "code": 0.000379,
+    "math": 0.000202,
+    "text": 4.2e-05
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:ccc0c257a05847940320779e585d143e5500296d0599c78f600c9346c44fcfe3",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 161.0,
+  "score_s": 254.5,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T01:47:51Z"
+ }
+}

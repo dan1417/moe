@@ -1,0 +1,15 @@
+{
+ "label": "m1_s150_x2",
+ "group": "m1",
+ "description": "start + 2.0 x (step-150 - start): extrapolate the MAIN run's direction",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-150",
+   "coef": 2.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_m1",
+   "coef": -1.0
+  }
+ ]
+}

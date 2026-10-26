@@ -1,0 +1,45 @@
+{
+ "label": "pub_8ccade2df9",
+ "description": "C10_S50 + toCD4=0.075,toMA1=0.3 | layers 0-14 x1.25 15-29 x1 30-44 x1 | CD4 = CODE #4 teutonic-II-110B-A7B-5ek5koe5-v56; MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.625
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.3
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 0.075
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.self_attn\\.",
+   "coefs": [
+    0.53125,
+    0.375,
+    0.09375
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    0.53125,
+    0.375,
+    0.09375
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.",
+   "coefs": [
+    0.53125,
+    0.375,
+    0.09375
+   ]
+  }
+ ]
+}

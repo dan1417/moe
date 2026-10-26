@@ -1,0 +1,46 @@
+# Variant of b300.yaml mirroring king #29's own recipe: train layers 16-44 + lm_head + final norm,
+# freeze layers 0-15, embeddings and routers (~37B params). Per GPU: fp32 master 55 GB (frozen params
+# stay fp32 under FSDP2) + grads 36 GB + AdamW m,v 72 GB ≈ 164 GB + activations ≈ 195 GB
+# -> comfortable on 8xB300 (288 GB); NOT enough for 8xB200 (192 GB).
+king_dir: /data/king
+output_dir: /data/runs/line_upper
+seed: 0
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+- \.mlp\.gate\.weight$
+- \.mlp\.gate\.e_score_correction_bias$
+- ^model\.embed_tokens\.
+- ^model\.layers\.([0-9]|1[0-5])\.
+optimizer:
+  lr: 1.0e-05
+  betas:
+  - 0.9
+  - 0.95
+  eps: 1.0e-08
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 1200
+  warmup_steps: 50
+  decay_steps: 300
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.99
+  every: 5
+data:
+  pool_dir: /data/pools/line_a
+  val_dir: /data/pools/val
+  val_n: 1024
+  micro_batch: 4
+  grad_accum: 8
+  seed: 0
+log_every: 10
+eval_every: 100
+export_every: 300
+export_raw: true
+checkpoint:
+  every: 300
+  keep: 1
+  resume: true

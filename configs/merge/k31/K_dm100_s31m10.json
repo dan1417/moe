@@ -1,0 +1,41 @@
+{
+ "label": "K_dm100_s31m10",
+ "description": "#31u + 1.0\u00b7Dm \u2212 0.1\u00b7S31 (give back a bit of #31's step where it overlaps)",
+ "method": "task-arith",
+ "vecs": {
+  "Dm": 1.0,
+  "S31": -0.1
+ },
+ "overrides": [],
+ "priority": 20,
+ "limit": 800,
+ "ship": {
+  "label": "K_dm100_s31m10",
+  "description": "#31u + 1.0\u00b7Dm \u2212 0.1\u00b7S31 (give back a bit of #31's step where it overlaps)",
+  "terms": [
+   {
+    "model": "/opt/teutonic/hf/king31u",
+    "coef": 0.9
+   },
+   {
+    "model": "/opt/teutonic/hf/k30u",
+    "coef": 1.0
+   },
+   {
+    "model": "/opt/teutonic/hf/king30u",
+    "coef": -0.9
+   }
+  ],
+  "overrides": []
+ },
+ "vec_specs": {
+  "Dm": [
+   "/opt/teutonic/hf/k30u",
+   "/opt/teutonic/hf/king30u"
+  ],
+  "S31": [
+   "/opt/teutonic/hf/king31u",
+   "/opt/teutonic/hf/king30u"
+  ]
+ }
+}

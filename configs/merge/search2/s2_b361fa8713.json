@@ -1,0 +1,38 @@
+{
+ "label": "s2_b361fa8713",
+ "description": "model stock (#43; KMATH_ddd9e626, KC2, KT2) on KTEXT_9a39afee x2",
+ "group": "search2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  }
+ ],
+ "mode": "model_stock",
+ "mode_args": {
+  "base": 0,
+  "models": [
+   1,
+   2,
+   3
+  ],
+  "on": 4,
+  "scale": 2.0
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "label": "nohead_a10",
+ "description": "CPT step everywhere except lm_head, alpha 1",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "^(?!lm_head\\.).+",
+   "coefs": [
+    1.0,
+    1.0,
+    -1.0
+   ]
+  }
+ ]
+}

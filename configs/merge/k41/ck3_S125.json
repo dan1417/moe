@@ -1,0 +1,100 @@
+{
+ "label": "ck3_S125",
+ "description": "CK3 + 0.25\u00b7S (extrapolate their training step by 25%)",
+ "method": "momentum",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7CK3T - 0.0625\u00b7OURS",
+ "vecs": {
+  "CK3": 1.0,
+  "CK3T": 0.25,
+  "OURS": -0.0625
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.1875
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.25
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": -0.0625
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -9.6e-05,
+    "se": 3.5e-05,
+    "lcb": -0.000205,
+    "lcb30k": -0.000123
+   },
+   "code": {
+    "mu": 0.000349,
+    "se": 6.59e-05,
+    "lcb": 0.000146,
+    "lcb30k": 0.000302
+   },
+   "text": {
+    "mu": 0.000948,
+    "se": 0.0001025,
+    "lcb": 0.000631,
+    "lcb30k": 0.000883
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000193,
+   "lcb": -0.000386,
+   "se": 6.14e-05,
+   "sources": {
+    "code-reasoning": -5.9e-05,
+    "math-reasoning": -7.9e-05,
+    "pretrain-behaviors": -0.00026,
+    "sft-reasoning": 0.000907,
+    "txt360-v2": -0.000387
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001867,
+    "math": 0.001044,
+    "text": 0.000731
+   },
+   "CK3_b41": {
+    "code": -6.2e-05,
+    "math": -4.1e-05,
+    "text": -0.000387
+   },
+   "t1_d3605": {
+    "code": 0.000574,
+    "math": 0.00029,
+    "text": -0.000642
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:17e4edbbaaca3276aa87ea61c8405660d9881d50344b6dcdd89f5443df0884da",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 137.3,
+  "score_s": 254.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T00:54:57Z"
+ }
+}

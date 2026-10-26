@@ -1,0 +1,29 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c",
+   "coef": 0.2
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.2
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "label": "K38_d36c_b020_expertsonly"
+}

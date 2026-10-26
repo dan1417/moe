@@ -1,0 +1,22 @@
+{
+ "label": "t120",
+ "description": "K41 + 1.2\u00b7T",
+ "method": "trajectory",
+ "vec_spec": "K41 + 1.2\u00b7T",
+ "vecs": {
+  "T": 1.2
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": -0.2
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.2
+  }
+ ],
+ "overrides": [],
+ "priority": 60,
+ "main_limit": 800
+}

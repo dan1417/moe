@@ -1,0 +1,11 @@
+{
+ "label": "pub_992a48c1da",
+ "description": "raw: CD5 as is | CD5 = CODE #5 teutonic-II-110B-A7B-holly",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 1.0
+  }
+ ]
+}

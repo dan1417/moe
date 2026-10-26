@@ -1,0 +1,10 @@
+{
+ "label": "k30u_raw",
+ "description": "public merge body teutonic-II-110B-merge-k30u, no blend with #31",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 1.0
+  }
+ ]
+}

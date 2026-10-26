@@ -1,0 +1,19 @@
+{
+ "label": "pub_20223ae0e6",
+ "description": "CD5 + stepTX6=0.25 | CD5 = CODE #5 teutonic-II-110B-A7B-holly",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/76d55249acbc4868d53e5c1260d53fa521ee643d1f0bb7f97811f61410e5814b",
+   "coef": -0.25
+  }
+ ]
+}

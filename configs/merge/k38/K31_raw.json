@@ -1,0 +1,10 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "label": "K31_raw"
+}

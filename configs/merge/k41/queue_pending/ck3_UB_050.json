@@ -1,0 +1,27 @@
+{
+ "label": "ck3_UB_050",
+ "description": "#42 + 0.50\u00b7(U1\u2212U2)",
+ "method": "transplant",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.5\u00b7UB",
+ "vecs": {
+  "CK3": 1.0,
+  "UB": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/hf_K38_g0875_e020_d010",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/hf_K38_g0875_e020_d010_B_n4000",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [],
+ "priority": -84.0,
+ "main_limit": 800
+}

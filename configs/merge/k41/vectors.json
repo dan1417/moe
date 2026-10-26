@@ -1,0 +1,52 @@
+{
+ "T": [
+  "T1",
+  "K41"
+ ],
+ "D41": [
+  "K41",
+  "K40"
+ ],
+ "P": [
+  "T1",
+  "K40"
+ ],
+ "D36": "/data/teutonic/vec/d36_35q",
+ "Tc": "/data/teutonic/vec/T_cons41",
+ "Tlr": "/data/teutonic/vec/T_lr50",
+ "D33": "/data/teutonic/vec/d33_32q",
+ "P32_29": "/data/teutonic/vec/p32_29q",
+ "Tq": "/data/teutonic/vec/T_q",
+ "D28": "/data/teutonic/vec/d28_27q",
+ "D27": "/data/teutonic/vec/d27_26q",
+ "D29": "/data/teutonic/vec/d29_28q",
+ "OURS": [
+  "CK1",
+  "T1"
+ ],
+ "CK3T": [
+  "CK3",
+  "T1"
+ ],
+ "D24": "/data/teutonic/vec/d24_23q",
+ "P40_36": "/data/teutonic/vec/p40_36q",
+ "D40": "/data/teutonic/vec/d40_39q",
+ "D39": "/data/teutonic/vec/d39_38q",
+ "D38": "/data/teutonic/vec/d38_37q",
+ "UB": [
+  "U1",
+  "U2"
+ ],
+ "U2T": [
+  "U2",
+  "T1"
+ ],
+ "U3T": [
+  "U3",
+  "T1"
+ ],
+ "TA": [
+  "text_lora_a_s200",
+  "text_lora_a_s0"
+ ]
+}

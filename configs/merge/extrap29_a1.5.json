@@ -1,0 +1,15 @@
+{
+ "label": "extrap29_a1.5",
+ "description": "29 + 1.5*(29-28)",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 2.5
+  },
+  {
+   "model": "reign:28",
+   "coef": -1.5
+  }
+ ],
+ "overrides": []
+}

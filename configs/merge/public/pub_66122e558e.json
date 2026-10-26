@@ -1,0 +1,19 @@
+{
+ "label": "pub_66122e558e",
+ "description": "slerp(C10_S50, MA1, t=0.3) | MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.3
+ }
+}

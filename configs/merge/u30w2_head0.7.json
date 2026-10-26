@@ -1,0 +1,28 @@
+{
+ "label": "u30w2_head0.7",
+ "description": "lm_head + shared-expert deltas x0.7",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.17
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.13
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "^lm_head\\.|\\.shared_experts\\.",
+   "coefs": [
+    1.0,
+    0.119,
+    0.091
+   ]
+  }
+ ]
+}

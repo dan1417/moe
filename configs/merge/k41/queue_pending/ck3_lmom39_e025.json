@@ -1,0 +1,40 @@
+{
+ "label": "ck3_lmom39_e025",
+ "description": "#42 + experts-only 0.25\u00b7(T1\u2212#39)",
+ "method": "momentum",
+ "vec_spec": "0 + 1\u00b7CK3 [experts: CK3=1, P=0.25, D40=0.25]",
+ "vecs": {
+  "CK3": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d40_39q",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    -0.25,
+    0.25,
+    1.0,
+    0.25
+   ]
+  }
+ ],
+ "priority": -42.0,
+ "main_limit": 800
+}

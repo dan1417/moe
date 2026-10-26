@@ -1,0 +1,114 @@
+{
+ "label": "tx_T125_d41_025",
+ "description": "TEXT: best recipe + 0.25\u00b7T (#41\u2192T1 step) all tensors",
+ "method": "trajectory",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7T + 0.25\u00b7D41 [experts: CK3=1, T=0.25, D41=0.25, P=0.15]",
+ "vecs": {
+  "CK3": 1.0,
+  "T": 0.25,
+  "D41": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.0,
+    -0.4,
+    0.4,
+    1.0
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000527,
+    "se": 5.92e-05,
+    "lcb": -0.00071,
+    "lcb30k": -0.000587
+   },
+   "code": {
+    "mu": -0.000298,
+    "se": 6.92e-05,
+    "lcb": -0.000512,
+    "lcb30k": -0.000353
+   },
+   "text": {
+    "mu": 0.001358,
+    "se": 0.0002154,
+    "lcb": 0.000692,
+    "lcb30k": 0.001227
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.001023,
+   "lcb": -0.001472,
+   "se": 0.0001525,
+   "sources": {
+    "code-reasoning": -0.000692,
+    "math-reasoning": -0.000702,
+    "pretrain-behaviors": -0.001292,
+    "sft-reasoning": -0.002403,
+    "txt360-v2": -0.001238
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.000872,
+    "math": 0.000442,
+    "text": 0.001658
+   },
+   "CK3_b41": {
+    "code": -0.001057,
+    "math": -0.000643,
+    "text": 0.000541
+   },
+   "t1_d3605": {
+    "code": -0.000421,
+    "math": -0.000311,
+    "text": 0.000286
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:7f9db0753dc79e690f315f46eabd1381943c9e9e221065e029f8d893ab08126f",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 165.1,
+  "score_s": 257.9,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T04:59:46Z"
+ }
+}

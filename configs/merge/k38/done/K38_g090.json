@@ -1,0 +1,14 @@
+{
+ "label": "K38_g090",
+ "description": "king #38 with router bias b' = 0.90\u00b7(b \u2212 mean b) (pod-3 lever, +0.00022 on #37)",
+ "method": "router-bias",
+ "priority": 10,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g090",
+   "coef": 1.0
+  }
+ ],
+ "overrides": []
+}

@@ -1,0 +1,35 @@
+{
+ "label": "s3_4b3408e9af",
+ "description": "KCODE_0c681d78 + CK1D=0.25,DC1=0.5,dTX=1",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c2_r1/step-25",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_text_s2_33af3cb46e",
+   "coef": -1.0
+  }
+ ]
+}

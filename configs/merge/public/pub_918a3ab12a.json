@@ -1,0 +1,77 @@
+{
+ "label": "pub_918a3ab12a",
+ "description": "TX6 + stepCD5=0.5 | lin attn x0.7 experts x1.15 | router x1 embed/head x0.7 norms x1 | TX6 = TEXT #6 teutonic-II-110B-A7B-5DALwjE4-105",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": -0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "embed_tokens|lm_head",
+   "coefs": [
+    1.0,
+    0.35,
+    -0.35
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.35,
+    -0.35
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.575,
+    -0.575
+   ]
+  },
+  {
+   "pattern": "layers\\.(1[5-9]|2[0-9])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.35,
+    -0.35
+   ]
+  },
+  {
+   "pattern": "layers\\.(1[5-9]|2[0-9])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.575,
+    -0.575
+   ]
+  },
+  {
+   "pattern": "layers\\.(3[0-9]|4[0-4])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.35,
+    -0.35
+   ]
+  },
+  {
+   "pattern": "layers\\.(3[0-9]|4[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.575,
+    -0.575
+   ]
+  }
+ ]
+}

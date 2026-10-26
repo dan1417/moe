@@ -1,0 +1,109 @@
+{
+ "label": "tx_best_mn",
+ "description": "TEXT: best recipe with every expert matrix rescaled to #42's Frobenius norm (extrapolate the direction only)",
+ "method": "task-arith",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 [experts: CK3=1, D41=0.25, P=0.15] {\\.mlp\\.experts\\. match_norm {'ref': 3.0}}",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0
+   ]
+  }
+ ],
+ "transforms": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "op": "match_norm",
+   "args": {
+    "ref": 3.0
+   }
+  }
+ ],
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000128,
+    "se": 5.3e-05,
+    "lcb": -0.000292,
+    "lcb30k": -0.000182
+   },
+   "code": {
+    "mu": 0.000189,
+    "se": 6.72e-05,
+    "lcb": -1.8e-05,
+    "lcb30k": 0.000138
+   },
+   "text": {
+    "mu": 0.001997,
+    "se": 0.0001957,
+    "lcb": 0.001392,
+    "lcb30k": 0.001878
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001342,
+    "math": 0.000752,
+    "text": 0.002405
+   },
+   "CK3_b41": {
+    "code": -0.000587,
+    "math": -0.000334,
+    "text": 0.001287
+   },
+   "t1_d3605": {
+    "code": 4.9e-05,
+    "math": -2e-06,
+    "text": 0.001032
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "recipe:7d52a4313a7a1ebc8e8178f5d62def72ec5b7bfaa96728b575075f2b5778734d",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 306.3,
+  "score_s": 189.5,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T08:57:46Z"
+ }
+}

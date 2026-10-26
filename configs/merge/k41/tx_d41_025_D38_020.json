@@ -1,0 +1,119 @@
+{
+ "label": "tx_d41_025_D38_020",
+ "description": "TEXT: best recipe + 0.20\u00b7(#38\u2212#37) all tensors (uses #37/#38)",
+ "method": "trajectory",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 + 0.2\u00b7D38 [experts: CK3=1, D41=0.25, D38=0.2, P=0.15]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25,
+  "D38": 0.2
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d38_37q",
+   "coef": 0.2
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0,
+    0.2
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000247,
+    "se": 5.6e-05,
+    "lcb": -0.00042,
+    "lcb30k": -0.000303
+   },
+   "code": {
+    "mu": 9.9e-05,
+    "se": 6.79e-05,
+    "lcb": -0.000111,
+    "lcb30k": 4.6e-05
+   },
+   "text": {
+    "mu": 0.001814,
+    "se": 0.000201,
+    "lcb": 0.001193,
+    "lcb30k": 0.001691
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000619,
+   "lcb": -0.00098,
+   "se": 0.0001286,
+   "sources": {
+    "code-reasoning": -0.000215,
+    "math-reasoning": -0.000464,
+    "pretrain-behaviors": -0.00101,
+    "sft-reasoning": -0.000117,
+    "txt360-v2": -0.000558
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001284,
+    "math": 0.000642,
+    "text": 0.002179
+   },
+   "CK3_b41": {
+    "code": -0.000645,
+    "math": -0.000443,
+    "text": 0.001062
+   },
+   "t1_d3605": {
+    "code": -8e-06,
+    "math": -0.000111,
+    "text": 0.000807
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:520fbf01e9f9ff21abd4263c1bedc604a2e97f454987ee32084709f08bc12d43",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 373.4,
+  "score_s": 255.1,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T08:49:30Z"
+ }
+}

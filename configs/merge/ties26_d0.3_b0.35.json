@@ -1,0 +1,23 @@
+{
+ "label": "ties26_d0.3_b0.35",
+ "description": "TIES-trimmed lineage-B step: 29 + 0.35*top30%|26-22|",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:26",
+   "coef": 0.0
+  },
+  {
+   "model": "reign:22",
+   "coef": 0.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.3,
+  "beta": 0.35
+ }
+}

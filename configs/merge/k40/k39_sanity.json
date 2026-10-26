@@ -1,0 +1,41 @@
+{
+ "label": "k39_sanity",
+ "description": "king #39 alone (sanity: validator says #40 beats it by 0.00318)",
+ "method": "task-arith",
+ "vecs": {
+  "K39": 1.0
+ },
+ "vec_overrides": [],
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/r39_b40",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": -0.003442,
+  "lcb": -0.00503,
+  "robust_lcb": null,
+  "win_rate": 0.25,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.900617,
+  "sources": {
+   "code-reasoning": -0.002073,
+   "math-reasoning": -0.000798,
+   "pretrain-behaviors": -0.002289,
+   "sft-reasoning": -0.003223,
+   "txt360-v2": -0.009783
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "sha256:b686d7c276019adebc342df55536c7b206ae21a712fd61075cbf9b765d851f56",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 31.3,
+  "score_s": 59.3,
+  "refilled_tensors": 34234,
+  "time": "2026-10-04T21:40:37Z"
+ }
+}

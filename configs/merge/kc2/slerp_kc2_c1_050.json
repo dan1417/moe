@@ -1,0 +1,19 @@
+{
+ "label": "slerp_kc2_c1_050",
+ "description": "SLERP(KC2, our final, t=0.5) per tensor",
+ "group": "kc2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

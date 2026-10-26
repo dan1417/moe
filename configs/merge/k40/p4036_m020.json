@@ -1,0 +1,45 @@
+{
+ "label": "p4036_m020",
+ "description": "#40 - 0.2\u00b7P40_36",
+ "method": "task-arith",
+ "vecs": {
+  "P40_36": -0.2
+ },
+ "vec_overrides": [],
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.8
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.2
+  }
+ ],
+ "overrides": [],
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": -0.001244,
+  "lcb": -0.001903,
+  "robust_lcb": null,
+  "win_rate": 0.3775,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.89842,
+  "sources": {
+   "code-reasoning": -0.000672,
+   "math-reasoning": -0.000172,
+   "pretrain-behaviors": -0.000479,
+   "sft-reasoning": -0.001999,
+   "txt360-v2": -0.004248
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:b4af5a89c19ee4fa58695b0db0e67c353d969b9e5627d9a68e19cadf43d3cbcf",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 176.3,
+  "score_s": 50.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-04T22:55:04Z"
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "label": "T1_hs0990",
+ "description": "T1 with lm_head \u00d7 0.99 (logit temperature)",
+ "method": "logit-scale",
+ "vec_spec": "0 + 1\u00b7T1 {^lm_head\\. scale {'s': 0.99}}",
+ "vecs": {
+  "T1": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "transforms": [
+  {
+   "pattern": "^lm_head\\.",
+   "op": "scale",
+   "args": {
+    "s": 0.99
+   }
+  }
+ ],
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.0012,
+    "se": 7.84e-05,
+    "lcb": 0.000958,
+    "lcb30k": 0.001118
+   },
+   "code": {
+    "mu": 0.001672,
+    "se": 9.27e-05,
+    "lcb": 0.001386,
+    "lcb30k": 0.001586
+   },
+   "text": {
+    "mu": -5.3e-05,
+    "se": 4.74e-05,
+    "lcb": -0.000199,
+    "lcb30k": -8.4e-05
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.001417,
+    "math": 0.000558,
+    "text": 0.003977
+   },
+   "95ef7a26": {
+    "code": -2.6e-05,
+    "math": 4e-06,
+    "text": -7.1e-05
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "recipe:e2444fdc9ccf6588dca108df406a2c039eccbbcf05c0d22ec07e9cfb6ef8ef60",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 1.8,
+  "score_s": 237.4,
+  "refilled_tensors": 45,
+  "time": "2026-10-07T16:46:31Z"
+ }
+}

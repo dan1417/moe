@@ -1,0 +1,15 @@
+{
+ "label": "soup_kmain_c7ef5487_kmath_050",
+ "description": "0.5 x KMAIN_c7ef5487 + 0.5 x the MATH king KMATH_ddd9e626",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.5
+  }
+ ]
+}

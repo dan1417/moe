@@ -1,0 +1,11 @@
+{
+ "label": "pub_e31430a9e3",
+ "description": "raw: CD1 as is | CD1 = CODE #1 teutonic-II-110B-A7B-001",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": 1.0
+  }
+ ]
+}

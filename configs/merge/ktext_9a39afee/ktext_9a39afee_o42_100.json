@@ -1,0 +1,19 @@
+{
+ "label": "ktext_9a39afee_o42_100",
+ "description": "KTEXT_9a39afee + 1.0 x our lineage since CK3",
+ "group": "ktext_9a39afee",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.0
+  }
+ ]
+}

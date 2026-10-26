@@ -1,0 +1,15 @@
+{
+ "label": "pub_ab6bfd59fc",
+ "description": "probe: C10_S50 - 0.3\u00b7(CD1 - C10_S50) = away from (ExPO) CD1 | CD1 = CODE #1 teutonic-II-110B-A7B-001",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.3
+  },
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": -0.3
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "label": "pub_e8f5681e72",
+ "description": "TX6 + stepCD5=0.5 | ties density 0.5 | TX6 = TEXT #6 teutonic-II-110B-A7B-5DALwjE4-105",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.5
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "sum",
+  "density": 0.5
+ }
+}

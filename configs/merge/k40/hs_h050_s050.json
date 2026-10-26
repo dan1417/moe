@@ -1,0 +1,73 @@
+{
+ "label": "hs_h050_s050",
+ "description": "#40 + 0\u00b7D40 [head: D40=0.5] [^model\\.layers\\.44\\.mlp\\.shared_experts\\.down_proj: D40=-0.5]",
+ "method": "task-arith",
+ "vecs": {
+  "D40": 0.0
+ },
+ "vec_overrides": [
+  {
+   "pattern": "^lm_head\\.",
+   "vecs": {
+    "D40": 0.5
+   }
+  },
+  {
+   "pattern": "^model\\.layers\\.44\\.mlp\\.shared_experts\\.down_proj",
+   "vecs": {
+    "D40": -0.5
+   }
+  }
+ ],
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r39_b40",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "^lm_head\\.",
+   "coefs": [
+    1.5,
+    -0.5
+   ]
+  },
+  {
+   "pattern": "^model\\.layers\\.44\\.mlp\\.shared_experts\\.down_proj",
+   "coefs": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": -0.017582,
+  "lcb": -0.02018,
+  "robust_lcb": null,
+  "win_rate": 0.035,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.914758,
+  "sources": {
+   "code-reasoning": -0.012705,
+   "math-reasoning": -0.00438,
+   "pretrain-behaviors": -0.00755,
+   "sft-reasoning": -0.01504,
+   "txt360-v2": -0.054347
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:c01b3027490d389486dbce8f8f6a647ccb543052d83130c4e80155d7c26e2a43",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 1.7,
+  "score_s": 50.8,
+  "refilled_tensors": 1,
+  "time": "2026-10-04T22:39:54Z"
+ }
+}

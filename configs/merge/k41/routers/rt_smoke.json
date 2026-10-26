@@ -1,0 +1,41 @@
+{
+ "label": "rt_smoke",
+ "item": {
+  "kind": "plugin",
+  "module": "train_router41",
+  "label": "rt_smoke",
+  "recipe": "ck3_d41_025_pmom015",
+  "pool": "/data/teutonic/pools/text_train",
+  "steps": 6,
+  "batch": 2,
+  "lr": 1e-05,
+  "val_n": 8,
+  "eval_every": 3,
+  "params": "router",
+  "attn": "eager",
+  "priority": -60,
+  "score_priority": -59,
+  "description": "smoke test of router fine-tuning (6 steps): memory, seconds/step, output plumbing"
+ },
+ "history": [
+  {
+   "step": 0,
+   "val": 1.1591574177145958
+  },
+  {
+   "step": 3,
+   "train": 1.1948558886845906,
+   "val": 1.1588384062051773
+  },
+  {
+   "step": 6,
+   "train": 1.7221449613571167,
+   "val": 1.1583887785673141
+  }
+ ],
+ "best_step": 6,
+ "best_val": 1.1583887785673141,
+ "val0": 1.1591574177145958,
+ "seconds": 60,
+ "out": "/data/teutonic/vec/routers/rt_smoke.safetensors"
+}

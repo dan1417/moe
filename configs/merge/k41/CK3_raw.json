@@ -1,0 +1,90 @@
+{
+ "label": "CK3_raw",
+ "description": "MAIN king #42 CK3 as is (5Ek5Ko: T1 + S + 0.25\u00b7(CK1\u2212T1))",
+ "method": "reference",
+ "vec_spec": "0 + 1\u00b7CK3",
+ "vecs": {
+  "CK3": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.0,
+    "se": 0.0,
+    "lcb": 0.0,
+    "lcb30k": 0.0
+   },
+   "code": {
+    "mu": 0.000457,
+    "se": 5.92e-05,
+    "lcb": 0.000274,
+    "lcb30k": 0.000414
+   },
+   "text": {
+    "mu": 0.001234,
+    "se": 8.89e-05,
+    "lcb": 0.00096,
+    "lcb30k": 0.001178
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.0,
+   "lcb": 0.0,
+   "se": 0.0,
+   "sources": {
+    "code-reasoning": 0.0,
+    "math-reasoning": 0.0,
+    "pretrain-behaviors": 0.0,
+    "sft-reasoning": 0.0,
+    "txt360-v2": 0.0
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001929,
+    "math": 0.001085,
+    "text": 0.001117
+   },
+   "CK3_b41": {
+    "code": 0.0,
+    "math": 0.0,
+    "text": 0.0
+   },
+   "t1_d3605": {
+    "code": 0.000637,
+    "math": 0.000331,
+    "text": -0.000255
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "local2:ec98dbd1771df2f2818f930088301b11339c1157ec01241c68d676b3c411c1d4",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 0.0,
+  "score_s": 0.0,
+  "refilled_tensors": 0,
+  "time": "2026-10-07T23:45:03Z"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "label": "ck3_UB_100",
+ "description": "#42 + 1.0\u00b7(U1\u2212U2): the full B_n4000 step on #42",
+ "method": "transplant",
+ "vec_spec": "0 + 1\u00b7CK3 + 1\u00b7UB",
+ "vecs": {
+  "CK3": 1.0,
+  "UB": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/hf_K38_g0875_e020_d010",
+   "coef": -1.0
+  },
+  {
+   "model": "/data/teutonic/models/hf_K38_g0875_e020_d010_B_n4000",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "priority": -83.5,
+ "main_limit": 800
+}

@@ -1,0 +1,52 @@
+# Line E1: long, careful CPT (what the kings do: +0.003 per ~day of continuous training; their 2-4% weight deltas fit
+# ~2,000 Adam steps at lr ~1e-5). Start = C1 EMA@150 (+0.00244 vs #30). Lessons applied:
+#   * judged mid-run at constant LR, raw weights carry a noise excess that only averaging/cooldown removes (C1: EMA
+#     +0.0002 over raw) -> power-function EMA whose window grows with the run (~t/3 steps: 134 @400, 300 @900)
+#     = Polyak-style averaging, near-optimal for a noisy stationary objective; COOLDOWN by hand when the EMA flattens
+#   * 2M-token steps (the CE gradient is ~95% noise at 1M; B_noise ~10-20M tokens), lr x~1.1 (sqrt-batch rule, tempered)
+#   * beta2 0.99: halves the jitter of Adam's per-element step size from the noisy second-moment estimate
+#   * external-teacher distillation (D1-D3) dropped: pulls toward an off-distribution style, knowledge doesn't transfer
+king_dir: /mnt/ram/runs/line_c1/exports/step000150_ema
+output_dir: /workspace/teutonic/runs/line_e1
+export_dir: /mnt/ram/runs/line_e1/exports
+export_keep: 2
+seed: 505
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 4.5e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.5}   # routed experts (each sees ~1/32 of the tokens)
+  betas: [0.9, 0.99]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 3000
+  warmup_steps: 10
+  decay_steps: 150       # COOLDOWN trigger length
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.9995          # cap
+  every: 1
+  power: 2.0             # decay_t = (1 - 1/t)^3: window ~t/3 steps
+data:
+  pool_dir: /workspace/teutonic/pools/train_div
+  val_dir: /workspace/teutonic/pools/val_div
+  val_n: 4096
+  king_val_losses: /workspace/teutonic/pools/val_div/king30_losses.npy
+  micro_batch: 16
+  eval_batch: 32
+  grad_accum: 8          # 8 ranks x 16 x 8 = 1024 seqs = 2.1M tokens/step
+  seed: 505
+log_every: 10
+eval_every: 50
+export_every: 100
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}

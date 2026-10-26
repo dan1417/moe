@@ -1,0 +1,33 @@
+{
+ "label": "K38_g0875_e020_d010_n4000",
+ "description": "shipped composition (\u03b3 0.875 + momentum e0.20/d0.10) promoted to 4000 seqs",
+ "method": "promotion",
+ "priority": 6,
+ "limit": 4000,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

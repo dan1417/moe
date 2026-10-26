@@ -1,0 +1,38 @@
+{
+ "label": "pub_3759d7599b",
+ "description": "C10_S50 + toMA1=0.3 | lin attn x1 experts x0.75 | MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.3
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    0.775,
+    0.225
+   ]
+  },
+  {
+   "pattern": "layers\\.(1[5-9]|2[0-9])\\.mlp\\.experts\\.",
+   "coefs": [
+    0.775,
+    0.225
+   ]
+  },
+  {
+   "pattern": "layers\\.(3[0-9]|4[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    0.775,
+    0.225
+   ]
+  }
+ ]
+}

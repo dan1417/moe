@@ -1,0 +1,69 @@
+{
+ "label": "written_t1_d36050",
+ "description": "the written submission directory /data/teutonic/submit/t1_d36050 re-scored (must reproduce t1_d36050)",
+ "method": "written-check",
+ "vec_spec": "written(t1_d36050)",
+ "terms": [
+  {
+   "model": "/data/teutonic/submit/t1_d36050",
+   "coef": 1.0
+  }
+ ],
+ "main_limit": 0,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.002006,
+    "se": 8.45e-05,
+    "lcb": 0.001745,
+    "lcb30k": 0.001919
+   },
+   "code": {
+    "mu": 0.002751,
+    "se": 0.0001007,
+    "lcb": 0.00244,
+    "lcb30k": 0.002659
+   },
+   "text": {
+    "mu": 0.000578,
+    "se": 7.39e-05,
+    "lcb": 0.00035,
+    "lcb30k": 0.000531
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002693,
+    "math": 0.001338,
+    "text": 0.004438
+   },
+   "95ef7a26": {
+    "code": 0.001249,
+    "math": 0.000783,
+    "text": 0.000391
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "local2:bc2d0a30bf1a2fca0e9dcc2f72139c0a021bce97a87b58de9beeed41d158a272",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 39.0,
+  "score_s": 195.9,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T17:40:06Z"
+ }
+}

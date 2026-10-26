@@ -1,0 +1,11 @@
+{
+ "label": "pub_c7599f296b",
+ "description": "raw: C10C_S50 as is",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10c/step-50",
+   "coef": 1.0
+  }
+ ]
+}

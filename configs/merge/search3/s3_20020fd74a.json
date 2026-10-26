@@ -1,0 +1,23 @@
+{
+ "label": "s3_20020fd74a",
+ "description": "KTEXT_9a39afee + DC1=0.5,S_T=1",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 2.0
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": -1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  }
+ ]
+}

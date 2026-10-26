@@ -1,0 +1,18 @@
+{
+ "label": "K38_dperp_b050",
+ "description": "#38 + 0.5\u00b7Dperp",
+ "method": "task-arith",
+ "priority": 25,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c_orth",
+   "coef": 0.5
+  }
+ ],
+ "overrides": []
+}

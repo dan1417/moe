@@ -1,0 +1,85 @@
+{
+ "label": "T1_raw",
+ "description": "text king T1 (5DALwjE4-93) as is (reference; = #41 + 1.0\u00b7T)",
+ "method": "reference",
+ "vec_spec": "0 + 1\u00b7T1",
+ "vecs": {
+  "T1": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001212,
+    "se": 7.77e-05,
+    "lcb": 0.000972,
+    "lcb30k": 0.001131
+   },
+   "code": {
+    "mu": 0.001701,
+    "se": 9.28e-05,
+    "lcb": 0.001414,
+    "lcb30k": 0.001615
+   },
+   "text": {
+    "mu": 0.0,
+    "se": 0.0,
+    "lcb": 0.0,
+    "lcb30k": 0.0
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.001906,
+   "lcb": 0.001372,
+   "se": 0.0001984,
+   "sources": {
+    "code-reasoning": 0.000939,
+    "math-reasoning": 0.000391,
+    "pretrain-behaviors": 0.001525,
+    "sft-reasoning": 0.001036,
+    "txt360-v2": 0.005282
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.001443,
+    "math": 0.000554,
+    "text": 0.004048
+   },
+   "95ef7a26": {
+    "code": 0.0,
+    "math": 0.0,
+    "text": 0.0
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "sha256:95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 68.9,
+  "score_s": 66.1,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T16:27:42Z"
+ }
+}

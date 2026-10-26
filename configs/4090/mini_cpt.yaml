@@ -1,0 +1,127 @@
+# 8× RTX 4090 — depth-shrunk full-width MiMo-V2 CPT (no LoRA).
+# King is ~8.6B (4 layers × Teutonic-II 110B width: hidden 3072, 256 experts,
+# top-8), not the old ~40M toy. Dress rehearsal for NCCL + FSDP FULL_SHARD +
+# Muon/MoE before 8×B300 / 110B. Not a substitute for B300 mxfp8 or 110B depth.
+#
+# Build king:  python scripts/data/prepare_pipeline_model.py
+# Launch:      bash scripts/train/run_4090_mini_cpt.sh
+# Bring-up:    BRINGUP=1 bash scripts/train/run_4090_mini_cpt.sh   # 5 steps, random data
+
+hardware:
+  gpus_per_node: 8
+  num_nodes: 1
+
+training:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  activation_checkpointing: true
+  activation_checkpointing_mode: selective
+  low_precision: none
+  low_precision_strict: true
+  fp8_training: false
+  total_steps: 1000
+  smoke_steps: 0
+  log_every: 10
+  base_seed: 42
+  profile: mini
+  king_dir: ./pipeline_model
+  output_dir: ./checkpoints/4090_mini_cpt
+  eval_batch_size: 1
+  attn_implementation: eager
+  # Full genesis vocab; synthetic patterned data (Teutonic shards not used here).
+  # Seq 256 keeps activation memory manageable on 24GB 4090s with AC.
+  smoke_seq_len: 256
+  smoke_vocab_size: 152576
+  smoke_synthetic_data: true
+  smoke_patterned_data: true
+  smoke_pattern_period: 32
+
+scheduler:
+  type: wsd
+  warmup_steps: 50
+  stable_steps: 850
+  decay_steps: 100
+  lr_max: 3.0e-4
+  lr_min: 3.0e-5
+
+optimizer:
+  muon_lr: 0.02
+  muon_momentum: 0.95
+  muon_nesterov: true
+  muon_ns_steps: 5
+  muon_weight_decay: 0.05
+  muon_rms_scale: 0.2
+  adamw_lr: 3.0e-4
+  adamw_lr_min: 3.0e-5
+  adamw_betas: [0.9, 0.95]
+  adamw_eps: 1.0e-8
+  adamw_weight_decay: 0.1
+  adamw_bf16_states: true
+  router_lr_scale: 0.1
+  gradient_clip:
+    expert_ffn: 1.0
+    attention: 1.0
+    router: 0.5
+
+moe:
+  bias_update_speed: 0.001
+  z_loss_coeff: 1.0e-4
+  seq_aux_alpha: 1.0e-4
+  node_limit: 1
+  dispatch_overlap: false
+  delay_wgrad: false
+
+sparse_loco:
+  enabled: false
+
+parallelism:
+  fsdp: true
+  fsdp_cpu_offload: false
+
+compilation:
+  enabled: false
+
+packing:
+  enabled: false
+
+checkpoint_averaging:
+  enabled: true
+  n_checkpoints: 5
+  save_every_stable: 100
+  min_step_gap: 50
+
+lora:
+  enabled: false
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+  target_modules: [qkv_proj, o_proj]
+  freeze_base: true
+  train_routers: true
+  save_full_checkpoint: false
+
+qk_norm:
+  enabled: false
+
+submission:
+  output_dir: ./submit_model
+  genesis_dir: ./genesis
+  safety_margin: 0.05
+
+data:
+  cache_dir: ./shard_cache
+  cache_max_gb: 100
+  manifest_url: https://teutonic.ai/datasets/manifest.json
+  manifest_refresh_interval: 100
+  manifest_cache_ttl_sec: 60
+  num_workers: 2
+  prefetch_factor: 4
+  eval_prefetch_workers: 8
+  pin_memory: true
+  persistent_workers: true
+
+  sequence_pool:
+    enabled: false
+    pool_dir: ./sequence_pool
+    shards_per_source_range: [100, 500]
+    seqs_per_shard_range: [50, 500]

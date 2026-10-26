@@ -1,0 +1,116 @@
+{
+ "label": "tx_d41_050_mn",
+ "description": "TEXT: #42 + 0.50\u00b7D41 all tensors (experts +0.15\u00b7P) with experts and attention norm-matched to #42 (is the dose plateau norm growth?)",
+ "method": "task-arith",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.5\u00b7D41 [experts: CK3=1, D41=0.5, P=0.15] {\\.mlp\\.experts\\. match_norm {'ref': 3.0}} {\\.self_attn\\. match_norm {'ref': 3.0}}",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.5,
+    -0.65,
+    0.15,
+    1.0
+   ]
+  }
+ ],
+ "transforms": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "op": "match_norm",
+   "args": {
+    "ref": 3.0
+   }
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "op": "match_norm",
+   "args": {
+    "ref": 3.0
+   }
+  }
+ ],
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000793,
+    "se": 7.39e-05,
+    "lcb": -0.001021,
+    "lcb30k": -0.000869
+   },
+   "code": {
+    "mu": -0.00075,
+    "se": 8.35e-05,
+    "lcb": -0.001008,
+    "lcb30k": -0.000821
+   },
+   "text": {
+    "mu": 0.00131,
+    "se": 0.0002653,
+    "lcb": 0.000491,
+    "lcb30k": 0.001149
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.000258,
+    "math": 0.000168,
+    "text": 0.00178
+   },
+   "CK3_b41": {
+    "code": -0.001671,
+    "math": -0.000917,
+    "text": 0.000663
+   },
+   "t1_d3605": {
+    "code": -0.001034,
+    "math": -0.000586,
+    "text": 0.000408
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "recipe:b126d7943280cdd8bbc45c191118034b8969179f9bc343940d1e7b85bdfb9294",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 292.6,
+  "score_s": 189.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T09:19:42Z"
+ }
+}

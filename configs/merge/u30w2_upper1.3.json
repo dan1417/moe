@@ -1,0 +1,36 @@
+{
+ "label": "u30w2_upper1.3",
+ "description": "layers 27-44 x1.3, 0-26 x0.7",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.17
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.13
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "^model\\.layers\\.(2[7-9]|3[0-9]|4[0-4])\\.",
+   "coefs": [
+    1.0,
+    0.221,
+    0.169
+   ]
+  },
+  {
+   "pattern": "^model\\.layers\\.([0-9]|1[0-9]|2[0-6])\\.",
+   "coefs": [
+    1.0,
+    0.119,
+    0.091
+   ]
+  }
+ ]
+}

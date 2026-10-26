@@ -1,0 +1,15 @@
+{
+ "label": "pub_ae4a4791a9",
+ "description": "probe: C10_S50 + 0.3\u00b7(M42 - C10_S50) = toward M42 | M42 = MAIN #42 teutonic-II-110B-A7B-5ek5koe5-v53",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/M42_b41",
+   "coef": 0.3
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "label": "soup_kt2_m2s50_050",
+ "description": "0.5 x KT2 + 0.5 x our m2/step-50 (MATH)",
+ "group": "kt2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m2/step-50",
+   "coef": 0.5
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "label": "pub_142e7cbae7",
+ "description": "MA2 + stepM38=0.12,stepM39=0.2,stepM40=0.3,stepM45=0.45 | lin attn x0.7 experts x1.15 | router x1 embed/head x0.7 norms x1 | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 0.45
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": -0.45
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.3
+  },
+  {
+   "model": "/data/teutonic/models/b686d7c276019adebc342df55536c7b206ae21a712fd61075cbf9b765d851f56",
+   "coef": -0.1
+  },
+  {
+   "model": "/data/teutonic/models/f872c8bf524fc1f345515f269a56bc4aae95a9a484cac5093a29aa5c7aef56e8",
+   "coef": -0.08
+  },
+  {
+   "model": "/data/teutonic/models/e9d60451921c1495c5737f5aa6ebcd876adf370eff442e5223209d51658f5fd2",
+   "coef": -0.12
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "embed_tokens|lm_head",
+   "coefs": [
+    1.0,
+    0.315,
+    -0.315,
+    0.21,
+    -0.07,
+    -0.056,
+    -0.084
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.315,
+    -0.315,
+    0.21,
+    -0.07,
+    -0.056,
+    -0.084
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5175,
+    -0.5175,
+    0.345,
+    -0.115,
+    -0.092,
+    -0.138
+   ]
+  },
+  {
+   "pattern": "layers\\.(1[5-9]|2[0-9])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.315,
+    -0.315,
+    0.21,
+    -0.07,
+    -0.056,
+    -0.084
+   ]
+  },
+  {
+   "pattern": "layers\\.(1[5-9]|2[0-9])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5175,
+    -0.5175,
+    0.345,
+    -0.115,
+    -0.092,
+    -0.138
+   ]
+  },
+  {
+   "pattern": "layers\\.(3[0-9]|4[0-4])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.315,
+    -0.315,
+    0.21,
+    -0.07,
+    -0.056,
+    -0.084
+   ]
+  },
+  {
+   "pattern": "layers\\.(3[0-9]|4[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5175,
+    -0.5175,
+    0.345,
+    -0.115,
+    -0.092,
+    -0.138
+   ]
+  }
+ ]
+}

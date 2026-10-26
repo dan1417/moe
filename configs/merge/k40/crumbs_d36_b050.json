@@ -1,0 +1,50 @@
+{
+ "label": "crumbs_d36_b050",
+ "description": "#40 + 0.5\u00b7breadcrumbs(D36: drop top 1% and bottom 5%)",
+ "method": "ties",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.95,
+  "top_drop": 0.01,
+  "beta": 0.5
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": 0.000758,
+  "lcb": 0.000524,
+  "robust_lcb": null,
+  "win_rate": 0.6475,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.896417,
+  "sources": {
+   "code-reasoning": 0.000835,
+   "math-reasoning": 0.000701,
+   "pretrain-behaviors": 0.001376,
+   "sft-reasoning": 0.001169,
+   "txt360-v2": -0.000178
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:6b4639517293dc3f4643523387807c133b81c50b28e456f3d3da6df1d88b12f2",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 289.8,
+  "score_s": 50.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T00:45:52Z"
+ }
+}

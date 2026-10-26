@@ -1,0 +1,23 @@
+{
+ "label": "tt_x2h",
+ "description": "START + 2\u00b7\u0394 + H",
+ "method": "trajectory",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_full_1e6b/step-50",
+   "coef": 2.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_85e70b14d610",
+   "coef": -1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_heal_a1/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/heal_d41_015",
+   "coef": -1.0
+  }
+ ]
+}

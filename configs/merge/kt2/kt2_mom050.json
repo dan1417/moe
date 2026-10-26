@@ -1,0 +1,15 @@
+{
+ "label": "kt2_mom050",
+ "description": "KT2 + 0.5 x 5DAL's step since #43 (KT2 - #43)",
+ "group": "kt2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.5
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": -0.5
+  }
+ ]
+}

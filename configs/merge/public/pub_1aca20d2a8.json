@@ -1,0 +1,11 @@
+{
+ "label": "pub_1aca20d2a8",
+ "description": "raw: CD4 as is | CD4 = CODE #4 teutonic-II-110B-A7B-5ek5koe5-v56",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": 1.0
+  }
+ ]
+}

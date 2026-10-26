@@ -1,0 +1,95 @@
+{
+ "label": "ck3_d36_0375",
+ "description": "CK3 + 0.375\u00b7D36 (CK3 holds 0.125\u00b7D36; total 0.5 = our optimum)",
+ "method": "task-arith",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.375\u00b7D36",
+ "vecs": {
+  "CK3": 1.0,
+  "D36": 0.375
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.375
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000137,
+    "se": 3.92e-05,
+    "lcb": -0.000258,
+    "lcb30k": -0.000168
+   },
+   "code": {
+    "mu": 0.00034,
+    "se": 6.53e-05,
+    "lcb": 0.000138,
+    "lcb30k": 0.000292
+   },
+   "text": {
+    "mu": 0.000519,
+    "se": 0.0001147,
+    "lcb": 0.000165,
+    "lcb30k": 0.000447
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000368,
+   "lcb": -0.000615,
+   "se": 7.77e-05,
+   "sources": {
+    "code-reasoning": 0.000185,
+    "math-reasoning": 0.000105,
+    "pretrain-behaviors": 8.7e-05,
+    "sft-reasoning": -0.00017,
+    "txt360-v2": -0.002115
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.00198,
+    "math": 0.0011,
+    "text": 8.2e-05
+   },
+   "CK3_b41": {
+    "code": 5.1e-05,
+    "math": 1.5e-05,
+    "text": -0.001035
+   },
+   "t1_d3605": {
+    "code": 0.000688,
+    "math": 0.000346,
+    "text": -0.00129
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:7c5e2c12cff609e2524fa32d2ef00f4118541a3a4fedfb65642a8f2a0145a629",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 272.3,
+  "score_s": 254.0,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T01:03:44Z"
+ }
+}

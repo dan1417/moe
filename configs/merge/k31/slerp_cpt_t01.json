@@ -1,0 +1,18 @@
+{
+ "label": "slerp_cpt_t01",
+ "description": "SLERP(#31u, CPT, t=0.1)",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.1
+ }
+}

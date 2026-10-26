@@ -1,0 +1,30 @@
+[
+ {
+  "label": "up_d36_050q",
+  "repo": "yamalies/myzxnk3nvdm6",
+  "mu_hat": 0.000876,
+  "lcb": 0.000624,
+  "n": 800,
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "recipe": "configs/merge/k40/up_d36_050q.json",
+  "shards": 42,
+  "total_size": 220561730944,
+  "uploaded_at": "2026-10-05T02:17:00Z",
+  "gated": "manual",
+  "readme": false
+ },
+ {
+  "label": "f_d36050_pe015",
+  "repo": "yamalies/e2q5ngla76um",
+  "mu_hat": 0.001116,
+  "lcb": 0.000795,
+  "n": 800,
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "recipe": "configs/merge/k40/f_d36050_pe015.json",
+  "shards": 42,
+  "total_size": 220561730944,
+  "uploaded_at": "2026-10-05T04:43:13Z",
+  "gated": "manual",
+  "readme": false
+ }
+]

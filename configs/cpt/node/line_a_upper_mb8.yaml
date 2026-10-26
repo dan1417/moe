@@ -1,0 +1,47 @@
+# Line A (micro-batch 8 variant: larger per-expert GEMMs, fewer all-gathers per token). Same as line_a_upper otherwise: king #29/#30's own recipe — train layers 16-44 + lm_head + final norm, freeze
+# layers 0-15, embeddings and routers (~37B trainable). Starts from the merged body (+0.0018 vs #30).
+# Judge exports with scripts/eval/screen_export.sh (parity eval vs reign:30), never with train loss.
+#   bash scripts/train/node_train.sh configs/cpt/node/line_a_upper.yaml
+#   touch /workspace/teutonic/runs/line_a/COOLDOWN   # start the LR cooldown now (decay_steps), then stop
+#   touch /workspace/teutonic/runs/line_a/EXPORT     # one extra export after the current step
+#   touch /workspace/teutonic/runs/line_a/STOP       # export + stop after the current step
+king_dir: /dev/shm/teutonic/start                   # start checkpoint (merged body from HF)
+output_dir: /workspace/teutonic/runs/line_a
+export_dir: /mnt/ram/runs/line_a/exports
+export_keep: 2                                      # RAM disk: keep the 2 newest (touch <export>/KEEP to pin one)
+seed: 97
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 1.0e-5
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 2000      # hard cap ≈ 1.05B tokens; expected to stop earlier via COOLDOWN
+  warmup_steps: 50
+  decay_steps: 200       # linear cooldown length (also used by the COOLDOWN trigger)
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.99
+  every: 5
+data:
+  pool_dir: /workspace/teutonic/pools/line_a
+  val_dir: /workspace/teutonic/pools/val
+  val_n: 2048
+  king_val_losses: /workspace/teutonic/pools/val/king30_losses.npy   # real king on the same val sequences
+  micro_batch: 8
+  grad_accum: 4          # 8 ranks x 8 x 4 = 256 seqs = 524K tokens/step
+  seed: 97
+log_every: 10
+eval_every: 100
+export_every: 250        # EMA export (bf16, 220 GB on /mnt/ram)
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}     # DCP (1.3 TB) impossible on this node

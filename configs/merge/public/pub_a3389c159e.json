@@ -1,0 +1,15 @@
+{
+ "label": "pub_a3389c159e",
+ "description": "probe: C10_S50 + 0.3\u00b7(TX2 - C10_S50) = toward TX2 | TX2 = TEXT #2 teutonic-II-110B-A7B-5DALwjE4-98",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 0.3
+  }
+ ]
+}

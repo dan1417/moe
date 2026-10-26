@@ -1,0 +1,15 @@
+{
+ "label": "pub_ae5c873db2",
+ "description": "probe: C10_S50 - 0.0587\u00b7(M39 - C10_S50) = away from (ExPO) M39 | M39 = MAIN #39 teutonic-II-110B-A7B-5DALwjE4-86",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0587
+  },
+  {
+   "model": "/data/teutonic/models/b686d7c276019adebc342df55536c7b206ae21a712fd61075cbf9b765d851f56",
+   "coef": -0.0587
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "label": "u30w2_ddare_p0.3",
+ "description": "DARE drop 30% with rescale on each delta",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.0
+  }
+ ],
+ "mode": "delta_dare",
+ "mode_args": {
+  "betas": [
+   0.17,
+   0.13
+  ],
+  "drop": 0.3
+ }
+}

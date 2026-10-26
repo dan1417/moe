@@ -1,0 +1,19 @@
+{
+ "label": "kmath_ddd9e626_dc1_100",
+ "description": "KMATH_ddd9e626 + 1.0 x our 200-step training step",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -1.0
+  }
+ ]
+}

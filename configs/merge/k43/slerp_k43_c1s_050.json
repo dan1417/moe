@@ -1,0 +1,19 @@
+{
+ "label": "slerp_k43_c1s_050",
+ "description": "SLERP(#43, our pre-training merge C1_START, t=0.5) per tensor",
+ "group": "non-linear",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

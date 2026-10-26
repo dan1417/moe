@@ -1,0 +1,19 @@
+{
+ "label": "s2_9148da2783",
+ "description": "KTEXT_9a39afee + DC1=0.5",
+ "group": "search2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  }
+ ]
+}

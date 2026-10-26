@@ -1,0 +1,26 @@
+{
+ "label": "u30w2_dties_d0.5",
+ "description": "TIES-trim each delta to top-50% |x|, x1.2 to compensate",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.0
+  }
+ ],
+ "mode": "delta_ties",
+ "mode_args": {
+  "betas": [
+   0.20400000000000001,
+   0.156
+  ],
+  "density": 0.5
+ }
+}

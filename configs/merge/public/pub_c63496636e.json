@@ -1,0 +1,37 @@
+{
+ "label": "pub_c63496636e",
+ "description": "M45 + stepCD5=0.25 | only experts | M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": -0.25
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.25,
+    -0.25
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.0,
+    0.0
+   ]
+  }
+ ]
+}

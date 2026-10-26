@@ -1,0 +1,19 @@
+{
+ "label": "tt_h",
+ "description": "START + H, H = heal_a1/step-50 \u2212 heal_d41_015 (repair direction without the extra D41)",
+ "method": "trajectory",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/start_85e70b14d610",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_heal_a1/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/heal_d41_015",
+   "coef": -1.0
+  }
+ ]
+}

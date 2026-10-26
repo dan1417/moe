@@ -1,0 +1,19 @@
+{
+ "label": "s3_069800e86d",
+ "description": "slerp(KCODE_0c681d78, TX75, t=0.5)",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c2_r1/step-25",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

@@ -1,0 +1,4 @@
+{"kind": "plugin", "module": "train_router41", "label": "cpt_shared_a", "recipe": "ck3_d41_025_pmom015",
+ "pool": "/data/teutonic/pools/text_train", "steps": 1000, "batch": 2, "accum": 1, "lr": 5e-6, "warmup": 50, "decay": "cosine",
+ "val_n": 96, "eval_every": 200, "params": "shared|dense|norm", "attn": "eager", "priority": -56, "score_priority": -55.5,
+ "description": "DENSE-PATH CPT of the best TEXT recipe: shared experts (every token) + layer-0 MLP + norms (~570M params) trained 1000 steps x 2 seqs on the text-competition pool, routed experts/attention/head frozen, best-by-val snapshot"}

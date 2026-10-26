@@ -1,0 +1,19 @@
+{
+ "label": "pub_129dd1c81f",
+ "description": "TX5 + toM38=0.0065 | M38 = MAIN #38 teutonic-II-110B-A7B-5DALwjE4-85; TX5 = TEXT #5 teutonic-II-110B-A7B-cypress",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/76d55249acbc4868d53e5c1260d53fa521ee643d1f0bb7f97811f61410e5814b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/f872c8bf524fc1f345515f269a56bc4aae95a9a484cac5093a29aa5c7aef56e8",
+   "coef": 0.0065
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": -0.0065
+  }
+ ]
+}

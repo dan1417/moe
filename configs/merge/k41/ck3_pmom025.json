@@ -1,0 +1,107 @@
+{
+ "label": "ck3_pmom025",
+ "description": "#42 + experts-only 0.25\u00b7(T1\u2212#40) (TEXT target; 0.15 gave +0.00167 vs T1)",
+ "method": "momentum",
+ "vec_spec": "0 + 1\u00b7CK3 [experts: CK3=1, P=0.25]",
+ "vecs": {
+  "CK3": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    -0.25,
+    0.25,
+    1.0
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000159,
+    "se": 4.69e-05,
+    "lcb": -0.000304,
+    "lcb30k": -0.000203
+   },
+   "code": {
+    "mu": 0.000159,
+    "se": 5.94e-05,
+    "lcb": -2.5e-05,
+    "lcb30k": 0.000116
+   },
+   "text": {
+    "mu": 0.001629,
+    "se": 0.0001635,
+    "lcb": 0.001124,
+    "lcb30k": 0.001529
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000477,
+   "lcb": -0.0008,
+   "se": 0.0001043,
+   "sources": {
+    "code-reasoning": -0.000303,
+    "math-reasoning": -0.000396,
+    "pretrain-behaviors": -0.000712,
+    "sft-reasoning": 0.000834,
+    "txt360-v2": -0.000414
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001403,
+    "math": 0.000813,
+    "text": 0.001853
+   },
+   "CK3_b41": {
+    "code": -0.000526,
+    "math": -0.000272,
+    "text": 0.000735
+   },
+   "t1_d3605": {
+    "code": 0.000111,
+    "math": 5.9e-05,
+    "text": 0.00048
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:aa4fc695183105f045a81639302776ad4b0cc8d2b6a5d83904ac7fea8f9c01a4",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 125.0,
+  "score_s": 254.1,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T01:23:00Z"
+ }
+}

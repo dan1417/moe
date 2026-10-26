@@ -1,0 +1,123 @@
+{
+ "label": "tx_pe035_d010",
+ "description": "TEXT target: experts momentum 0.35, dense momentum 0.10, routers frozen",
+ "method": "momentum",
+ "vec_spec": "K41 + 1\u00b7T + 0.5\u00b7D36 + 0.1\u00b7P [experts: T=1, D36=0.5, P=0.35] [router: T=1, D36=0.5, P=0]",
+ "vecs": {
+  "T": 1.0,
+  "D36": 0.5,
+  "P": 0.1
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.1
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.1
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.0,
+    -0.35,
+    1.35,
+    0.5
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    0.0,
+    0.0,
+    1.0,
+    0.5
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001829,
+    "se": 0.0001065,
+    "lcb": 0.0015,
+    "lcb30k": 0.001711
+   },
+   "code": {
+    "mu": -0.000436,
+    "se": 5.23e-05,
+    "lcb": -0.000598,
+    "lcb30k": -0.000478
+   },
+   "text": {
+    "mu": 0.001294,
+    "se": 0.0001806,
+    "lcb": 0.000736,
+    "lcb30k": 0.001184
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.002231,
+   "lcb": 0.001473,
+   "se": 0.0002856,
+   "sources": {
+    "code-reasoning": 0.001555,
+    "math-reasoning": 0.00084,
+    "pretrain-behaviors": 0.002246,
+    "sft-reasoning": 0.001038,
+    "txt360-v2": 0.004634
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002138,
+    "math": 0.000941,
+    "text": 0.005665
+   },
+   "95ef7a26": {
+    "code": 0.000695,
+    "math": 0.000386,
+    "text": 0.001617
+   },
+   "t1_d3605": {
+    "code": -0.000597,
+    "math": -0.000368,
+    "text": 0.000245
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:055c8dda22a77216cf20e990384887669bf6056e27dfdac97e791ca55e0a5484",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 315.3,
+  "score_s": 255.2,
+  "refilled_tensors": 34146,
+  "time": "2026-10-07T20:56:16Z"
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "label": "soup_ck3_ck1_50",
+ "description": "plain soup: 0.5\u00b7#42 + 0.5\u00b7our CODE king (= T1 + 0.5\u00b7S + 0.625\u00b7ours)",
+ "method": "soup",
+ "vec_spec": "0 + 0.5\u00b7CK3 + 0.5\u00b7CK1",
+ "vecs": {
+  "CK3": 0.5,
+  "CK1": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -6e-06,
+    "se": 3.83e-05,
+    "lcb": -0.000124,
+    "lcb30k": -3.6e-05
+   },
+   "code": {
+    "mu": 0.000398,
+    "se": 4.73e-05,
+    "lcb": 0.000252,
+    "lcb30k": 0.000365
+   },
+   "text": {
+    "mu": 0.001474,
+    "se": 9.66e-05,
+    "lcb": 0.001176,
+    "lcb30k": 0.001414
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -7.3e-05,
+   "lcb": -0.00029,
+   "se": 6.74e-05,
+   "sources": {
+    "code-reasoning": -0.000151,
+    "math-reasoning": -6.7e-05,
+    "pretrain-behaviors": -0.000228,
+    "sft-reasoning": 9.4e-05,
+    "txt360-v2": 0.000206
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001773,
+    "math": 0.001027,
+    "text": 0.001506
+   },
+   "CK3_b41": {
+    "code": -0.000155,
+    "math": -5.8e-05,
+    "text": 0.000388
+   },
+   "t1_d3605": {
+    "code": 0.000481,
+    "math": 0.000273,
+    "text": 0.000133
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:86fcdd318ab0def44ef70916766fb0fb4afe19dfad6cd3bc23f479363a6294c5",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 95.1,
+  "score_s": 253.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T01:35:06Z"
+ }
+}

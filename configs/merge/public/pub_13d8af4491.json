@@ -1,0 +1,19 @@
+{
+ "label": "pub_13d8af4491",
+ "description": "MA2 + stepCD5=0.25 | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": -0.25
+  }
+ ]
+}

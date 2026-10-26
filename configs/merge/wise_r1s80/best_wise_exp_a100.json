@@ -1,0 +1,11 @@
+{
+ "label": "best_wise_exp_a100",
+ "description": "WiSE best: parent/step-80 + 1.0*\u0394 on routed experts only",
+ "group": "wise_r1s80",
+ "terms": [
+  {
+   "model": "/data/teutonic/submit/best_math_wise_exp_a100",
+   "coef": 1.0
+  }
+ ]
+}

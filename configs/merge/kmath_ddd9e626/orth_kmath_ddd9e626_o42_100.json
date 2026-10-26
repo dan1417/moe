@@ -1,0 +1,23 @@
+{
+ "label": "orth_kmath_ddd9e626_o42_100",
+ "description": "KMATH_ddd9e626 + (our lineage since CK3 minus its projection on KMATH_ddd9e626's path since CK3)",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "orthogonal",
+ "mode_args": {
+  "beta": 1.0
+ }
+}

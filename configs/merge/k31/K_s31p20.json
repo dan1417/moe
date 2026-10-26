@@ -1,0 +1,40 @@
+{
+ "label": "K_s31p20",
+ "description": "#31u + 0.2\u00b7S31 (extrapolate #31's own step; diagnostic)",
+ "method": "extrapolate",
+ "vecs": {
+  "S31": 0.2
+ },
+ "overrides": [],
+ "priority": 30,
+ "limit": 800,
+ "ship": {
+  "label": "K_s31p20",
+  "description": "#31u + 0.2\u00b7S31 (extrapolate #31's own step; diagnostic)",
+  "terms": [
+   {
+    "model": "/opt/teutonic/hf/king31u",
+    "coef": 1.2
+   },
+   {
+    "model": "/opt/teutonic/hf/k30u",
+    "coef": 0.0
+   },
+   {
+    "model": "/opt/teutonic/hf/king30u",
+    "coef": -0.2
+   }
+  ],
+  "overrides": []
+ },
+ "vec_specs": {
+  "Dm": [
+   "/opt/teutonic/hf/k30u",
+   "/opt/teutonic/hf/king30u"
+  ],
+  "S31": [
+   "/opt/teutonic/hf/king31u",
+   "/opt/teutonic/hf/king30u"
+  ]
+ }
+}

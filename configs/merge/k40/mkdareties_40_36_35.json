@@ -1,0 +1,57 @@
+{
+ "label": "mkdareties_40_36_35",
+ "description": "mergekit DARE-TIES base #35: TIES(#40\u2212#35 w1, DARE50(D36) w0.5), sum",
+ "method": "dare_ties",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "dare_ties",
+ "mode_args": {
+  "weights": [
+   1.0,
+   0.5
+  ],
+  "densities": [
+   1.0,
+   0.5
+  ],
+  "lambda": 1.0,
+  "normalize": false
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": 0.000525,
+  "lcb": 0.000273,
+  "robust_lcb": null,
+  "win_rate": 0.6112,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.89665,
+  "sources": {
+   "code-reasoning": 0.000661,
+   "math-reasoning": 0.000536,
+   "pretrain-behaviors": 0.001092,
+   "sft-reasoning": 0.000289,
+   "txt360-v2": -0.000442
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:191d3858693a3dd6bd954a8a170f3e59fea28f3a6a78d8fb424813908d7a89bf",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 246.5,
+  "score_s": 50.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T01:06:06Z"
+ }
+}

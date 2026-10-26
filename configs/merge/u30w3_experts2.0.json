@@ -1,0 +1,28 @@
+{
+ "label": "u30w3_experts2.0",
+ "description": "stack with routed-expert deltas x2.0",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.17
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.13
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.34,
+    0.26
+   ]
+  }
+ ]
+}

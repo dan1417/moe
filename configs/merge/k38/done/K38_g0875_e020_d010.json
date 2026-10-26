@@ -1,0 +1,33 @@
+{
+ "label": "K38_g0875_e020_d010",
+ "description": "\u03b3 0.875 router bias + momentum (experts 0.20, dense 0.10): composition of the two positive levers",
+ "method": "composition",
+ "priority": 12,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

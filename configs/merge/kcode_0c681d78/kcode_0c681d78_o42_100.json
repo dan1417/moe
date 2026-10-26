@@ -1,0 +1,19 @@
+{
+ "label": "kcode_0c681d78_o42_100",
+ "description": "KCODE_0c681d78 + 1.0 x our lineage since CK3",
+ "group": "kcode_0c681d78",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.0
+  }
+ ]
+}

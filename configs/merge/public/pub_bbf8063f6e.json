@@ -1,0 +1,11 @@
+{
+ "label": "pub_bbf8063f6e",
+ "description": "raw: C11_S25 as is",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c11/step-25",
+   "coef": 1.0
+  }
+ ]
+}

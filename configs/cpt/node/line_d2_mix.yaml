@@ -1,0 +1,56 @@
+# Line D2: ENSEMBLE distillation. D1 (CE + 1.0*soft-CE(teacher)) made txt360 0.027 worse by step 50: pulling the
+# model toward the teacher makes it teacher-like, and the teacher alone is worse. The +0.109 came from the probability
+# MIXTURE 0.5*p_ours + 0.5*p_teacher, so txt360 rows now train toward that mixture (frozen C1-EMA@150 top-64 +
+# teacher top-64): alpha*CE + beta*[(1-mix)*soft-CE(frozen) + mix*soft-CE(teacher)] -- optimum = the mixture itself.
+# lr 3e-6 (D1's 4e-6 moved fast), eval every 25 steps for an early go/no-go.
+king_dir: /mnt/ram/runs/line_c1/exports/step000150_ema   # C1 EMA@150 = +0.00244 vs king #30
+output_dir: /workspace/teutonic/runs/line_d2
+export_dir: /mnt/ram/runs/line_d2/exports
+export_keep: 2
+seed: 303
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 3.0e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.5}   # routed experts
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 3000
+  warmup_steps: 20
+  decay_steps: 150
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.99
+  every: 1
+data:
+  pool_dir: /workspace/teutonic/pools/train_div
+  val_dir: /workspace/teutonic/pools/val_div
+  val_n: 4096
+  king_val_losses: /workspace/teutonic/pools/val_div/king30_losses.npy
+  micro_batch: 16
+  eval_batch: 32
+  grad_accum: 4          # 8 ranks x 16 x 4 = 512 seqs = 1.05M tokens/step (128 of them teacher-labelled txt360)
+  seed: 303
+  kd_dir: /mnt/ram/kd/txt360_k64
+  kd_source: txt360-v2
+  kd_frac: 0.25          # 4 of 16 per micro-batch (eval share of txt360 is 0.22)
+  kd_lambda: 1.0
+  kd_student_dir: /mnt/ram/kd/txt360_k64_student   # frozen start model top-64 on the same sequences
+  kd_alpha: 0.5          # CE(label) weight on KD rows
+  kd_beta: 1.0           # weight of soft-CE vs the mixture target
+  kd_mix: 0.5            # mixture = 0.5 frozen student + 0.5 teacher (the txt360 optimum of the per-token analysis)
+log_every: 10
+eval_every: 25
+export_every: 100
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}

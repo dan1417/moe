@@ -1,0 +1,113 @@
+{
+ "label": "tx_pe050",
+ "description": "TEXT target: experts momentum 0.5\u00b7(T1\u2212#40)",
+ "method": "momentum",
+ "vec_spec": "K41 + 1\u00b7T + 0.5\u00b7D36 [experts: T=1, D36=0.5, P=0.5]",
+ "vecs": {
+  "T": 1.0,
+  "D36": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.0,
+    -0.5,
+    1.5,
+    0.5
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001245,
+    "se": 0.0001155,
+    "lcb": 0.000889,
+    "lcb30k": 0.001117
+   },
+   "code": {
+    "mu": -0.001302,
+    "se": 6.57e-05,
+    "lcb": -0.001505,
+    "lcb30k": -0.001357
+   },
+   "text": {
+    "mu": 0.000541,
+    "se": 0.0002293,
+    "lcb": -0.000167,
+    "lcb30k": 0.000402
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.001373,
+   "lcb": 0.000553,
+   "se": 0.0003143,
+   "sources": {
+    "code-reasoning": 0.000905,
+    "math-reasoning": 0.000301,
+    "pretrain-behaviors": 0.001311,
+    "sft-reasoning": 0.000539,
+    "txt360-v2": 0.003295
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.001165,
+    "math": 0.00048,
+    "text": 0.004896
+   },
+   "95ef7a26": {
+    "code": -0.000278,
+    "math": -7.4e-05,
+    "text": 0.000849
+   },
+   "t1_d3605": {
+    "code": -0.001571,
+    "math": -0.000828,
+    "text": -0.000524
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:7e224f53b8caca5aa744c324a7411695f52ab7293dc4f0235650ff8e77c68fca",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 295.3,
+  "score_s": 254.4,
+  "refilled_tensors": 33792,
+  "time": "2026-10-07T20:46:45Z"
+ }
+}

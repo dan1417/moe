@@ -1,0 +1,44 @@
+{
+ "label": "u30w3_e1.15_a0.7_h0.7",
+ "description": "experts x1.15, attention x0.7, head+shared x0.7",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.17
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.13
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.1955,
+    0.1495
+   ]
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.119,
+    0.091
+   ]
+  },
+  {
+   "pattern": "^lm_head\\.|\\.shared_experts\\.",
+   "coefs": [
+    1.0,
+    0.119,
+    0.091
+   ]
+  }
+ ]
+}

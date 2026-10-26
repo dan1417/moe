@@ -1,0 +1,23 @@
+{
+ "label": "orth_ktext_9a39afee_m1s175",
+ "description": "KTEXT_9a39afee + (our m1/step-175 - #43, minus its projection on KTEXT_9a39afee - #43)",
+ "group": "ktext_9a39afee",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  }
+ ],
+ "mode": "orthogonal",
+ "mode_args": {
+  "beta": 1.0
+ }
+}

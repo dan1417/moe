@@ -1,0 +1,22 @@
+{
+ "label": "slerp_t160",
+ "description": "SLERP(#41, T1) at t=1.6 per tensor (norm-preserving geodesic extrapolation of the T step)",
+ "method": "slerp",
+ "vec_spec": "slerp(K41, T1; t=1.6)",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 1.6
+ },
+ "main_limit": 800,
+ "priority": 41
+}

@@ -1,0 +1,33 @@
+{
+ "label": "K38_s38_a015_sharedonly",
+ "description": "#38 + 0.15\u00b7S38 on shared experts only",
+ "method": "custom",
+ "priority": 27,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.15
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.15
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.shared_experts\\.",
+   "coefs": [
+    1.15,
+    -0.15
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

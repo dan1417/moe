@@ -1,0 +1,14 @@
+{
+ "label": "soup29_28",
+ "description": "0.5*29 + 0.5*28 (sanity: should land between #28 and #29)",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 0.5
+  },
+  {
+   "model": "reign:28",
+   "coef": 0.5
+  }
+ ]
+}

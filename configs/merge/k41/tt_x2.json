@@ -1,0 +1,15 @@
+{
+ "label": "tt_x2",
+ "description": "START + 2\u00b7\u0394, \u0394 = 1e6b/step-50 \u2212 START (1e-6 trajectory \u00d72)",
+ "method": "trajectory",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_full_1e6b/step-50",
+   "coef": 2.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_85e70b14d610",
+   "coef": -1.0
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "label": "s3_836f0ead38",
+ "description": "slerp(KTEXT_9a39afee, KCODE_0c681d78, t=0.3)",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.3
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "label": "pub_52db1c7599",
+ "description": "probe: C10_S50 + 0.3\u00b7(CD4 - C10_S50) = toward CD4 | CD4 = CODE #4 teutonic-II-110B-A7B-5ek5koe5-v56",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 0.3
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+# Line F1: selective language modeling (Rho-1) on txt360 with MiMo-V2.5-Base as the REFERENCE model, not a target.
+# Every CPT variant plateaus because ~95% of each CE gradient is noise; much of it from unpredictable tokens. Score each
+# txt360 token by excess loss = our CE - teacher CE and train (true labels, no soft targets -> no style shift) only on
+# the top 60%: tokens the teacher shows are predictable and we get wrong. Other sources: plain CE. Compare with E2
+# (same 6 txt360 per 16, plain CE: txt360 +0.0003 @50).
+king_dir: /mnt/ram/runs/line_c1/exports/step000150_ema
+output_dir: /workspace/teutonic/runs/line_f1
+export_dir: /mnt/ram/runs/line_f1/exports
+export_keep: 2
+seed: 808
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 4.5e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.5}   # routed experts (each sees ~1/32 of the tokens)
+  betas: [0.9, 0.99]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 3000
+  warmup_steps: 10
+  decay_steps: 150       # COOLDOWN trigger length
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.9995          # cap
+  every: 1
+  power: 2.0             # decay_t = (1 - 1/t)^3: window ~t/3 steps
+data:
+  pool_dir: /workspace/teutonic/pools/train_div
+  val_dir: /workspace/teutonic/pools/val_div
+  val_n: 4096
+  king_val_losses: /workspace/teutonic/pools/val_div/king30_losses.npy
+  micro_batch: 16
+  eval_batch: 32
+  grad_accum: 8          # 8 ranks x 16 x 8 = 1024 seqs = 2.1M tokens/step
+  seed: 808
+  kd_dir: /mnt/ram/kd/txt360_k64       # MiMo-V2.5-Base top-64 on 24k txt360 training sequences (used ONLY to score tokens)
+  kd_source: txt360-v2
+  kd_frac: 0.375                       # 6 of 16 per micro-batch are teacher-scored txt360 (E2 had 6 txt360 on plain CE)
+  kd_lambda: 1.0                       # row mask
+  slm_keep: 0.6                        # CE on the 60% of their tokens with the largest excess loss (ours - teacher)
+log_every: 10
+eval_every: 25
+export_every: 100
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}

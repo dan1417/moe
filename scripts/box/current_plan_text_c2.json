@@ -1,0 +1,17 @@
+{
+ "base": "text_upper_ema_c2",
+ "start": "/data/teutonic/ckpt/start_text_s2_33af3cb46e",
+ "total": 240,
+ "skip0": 0,
+ "decay_abs": 180,
+ "lr": 7.5e-06,
+ "min_frac": 0.1,
+ "warmup": 10,
+ "seqs_per_step": 2048,
+ "max_resumes": 6,
+ "launcher": "text_run.sh",
+ "comps": "text,main",
+ "why": "TEXT run from the joint-search TEXT best s2_33af3cb46e (TEXT +0.000697 vs KTEXT at 1 200 seqs); 01:00 UTC: lr 1.5e-6 -> 3e-6 from step 50 (val -0.00009 / TEXT +0.00007 per 25 steps, |g| 0.091 stable: too slow for the 0.002 bar); 02:05 UTC: 5DAL's TEXT step moved experts 2.0e-3 rel (32% of entries past bf16 rounding), c1 only 3.9e-4 while attention / shared / lm_head matched 5DAL -> experts lr 7.5e-6 (5x c1), dense 3e-6 (= c1), raw val for fast feedback, from r1/step-25 (abs 75)",
+ "dense_frac": 0.4,
+ "val_raw": 1
+}

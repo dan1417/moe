@@ -1,0 +1,99 @@
+{
+ "label": "tc100_d36050",
+ "description": "#41 + 1.0\u00b7Tc + 0.5\u00b7D36 \u2014 Tc = T kept only where sign(T) == sign(#41\u2212#40) (trajectory sign-consensus, 85% of |T|)",
+ "method": "consensus",
+ "vec_spec": "K41 + 1\u00b7Tc + 0.5\u00b7D36",
+ "vecs": {
+  "Tc": 1.0,
+  "D36": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/T_cons41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001755,
+    "se": 7.27e-05,
+    "lcb": 0.00153,
+    "lcb30k": 0.001679
+   },
+   "code": {
+    "mu": -0.000506,
+    "se": 6.57e-05,
+    "lcb": -0.000709,
+    "lcb30k": -0.000557
+   },
+   "text": {
+    "mu": 0.000388,
+    "se": 0.0001144,
+    "lcb": 3.4e-05,
+    "lcb30k": 0.000316
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.002271,
+   "lcb": 0.001742,
+   "se": 0.000181,
+   "sources": {
+    "code-reasoning": 0.001735,
+    "math-reasoning": 0.001169,
+    "pretrain-behaviors": 0.002657,
+    "sft-reasoning": 0.002493,
+    "txt360-v2": 0.003563
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002298,
+    "math": 0.001092,
+    "text": 0.004303
+   },
+   "95ef7a26": {
+    "code": 0.000855,
+    "math": 0.000538,
+    "text": 0.000255
+   },
+   "t1_d3605": {
+    "code": -0.000438,
+    "math": -0.000216,
+    "text": -0.001117
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:5256dd779e1c63a0433dfd9ad1f534164c8b6efc853fe4349ccf180bd2b4b651",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 486.0,
+  "score_s": 254.3,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T21:43:04Z"
+ }
+}

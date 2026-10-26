@@ -1,0 +1,19 @@
+{
+ "label": "kmath_ddd9e626_o42_050",
+ "description": "KMATH_ddd9e626 + 0.5 x our lineage since CK3",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -0.5
+  }
+ ]
+}

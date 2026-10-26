@@ -1,0 +1,18 @@
+{
+ "label": "K38_d36c_b020",
+ "description": "#38 + 0.2\u00b7D36c",
+ "method": "task-arith",
+ "priority": 20,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c",
+   "coef": 0.2
+  }
+ ],
+ "overrides": []
+}

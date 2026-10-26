@@ -1,0 +1,15 @@
+{
+ "label": "pub_95bab93d9c",
+ "description": "probe: C10_S50 + 0.0445\u00b7(M36 - C10_S50) = toward M36 | M36 = MAIN #36 teutonic-II-110B-A7B-5ek5koe5-v63",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.9555
+  },
+  {
+   "model": "/data/teutonic/models/M36_b41",
+   "coef": 0.0445
+  }
+ ]
+}

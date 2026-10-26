@@ -1,0 +1,19 @@
+{
+ "label": "kmain_c7ef5487_plus_m1d_050",
+ "description": "KMAIN_c7ef5487 + 0.5 x (our m1/step-175 - #43)",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": -0.5
+  }
+ ]
+}

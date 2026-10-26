@@ -1,0 +1,19 @@
+{
+ "label": "slerp_kt2_m1s175_050",
+ "description": "SLERP(KT2, our m1/step-175, t=0.5) per tensor",
+ "group": "kt2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

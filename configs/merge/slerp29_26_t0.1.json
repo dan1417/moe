@@ -1,0 +1,18 @@
+{
+ "label": "slerp29_26_t0.1",
+ "description": "SLERP(29, 26, t=0.1) per tensor",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:26",
+   "coef": 0.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.1
+ }
+}

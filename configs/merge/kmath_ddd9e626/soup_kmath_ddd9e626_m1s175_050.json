@@ -1,0 +1,15 @@
+{
+ "label": "soup_kmath_ddd9e626_m1s175_050",
+ "description": "0.5 x KMATH_ddd9e626 + 0.5 x our MAIN run m1/step-175",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 0.5
+  }
+ ]
+}

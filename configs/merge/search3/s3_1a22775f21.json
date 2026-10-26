@@ -1,0 +1,44 @@
+{
+ "label": "s3_1a22775f21",
+ "description": "model stock (#43; KMAIN_c7ef5487, KMATH_ddd9e626, KCODE_0c681d78, KC2, KT2) on K43 x1",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  }
+ ],
+ "mode": "model_stock",
+ "mode_args": {
+  "base": 0,
+  "models": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "on": 0,
+  "scale": 1.0
+ }
+}

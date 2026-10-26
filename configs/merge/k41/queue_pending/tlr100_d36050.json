@@ -1,0 +1,27 @@
+{
+ "label": "tlr100_d36050",
+ "description": "#41 + 1.0\u00b7Tlr + 0.5\u00b7D36 \u2014 Tlr = rank-truncated T (50% energy per expert/matrix, spectral denoising)",
+ "method": "low-rank",
+ "vec_spec": "K41 + 1\u00b7Tlr + 0.5\u00b7D36",
+ "vecs": {
+  "Tlr": 1.0,
+  "D36": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/T_lr50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [],
+ "priority": 15,
+ "main_limit": 800
+}

@@ -1,0 +1,99 @@
+{
+ "label": "ck3_ours025",
+ "description": "CK3 + 0.25\u00b7(CK1\u2212T1) = MM1 + 0.5\u00b7(our delta): their king with our full D36/momentum dose",
+ "method": "cross-merge",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7OURS",
+ "vecs": {
+  "CK3": 1.0,
+  "OURS": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.25
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 6.3e-05,
+    "se": 3.39e-05,
+    "lcb": -4.2e-05,
+    "lcb30k": 3.7e-05
+   },
+   "code": {
+    "mu": 0.000545,
+    "se": 6.07e-05,
+    "lcb": 0.000357,
+    "lcb30k": 0.000502
+   },
+   "text": {
+    "mu": 0.001331,
+    "se": 0.0001026,
+    "lcb": 0.001014,
+    "lcb30k": 0.001266
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -1e-06,
+   "lcb": -0.000198,
+   "se": 6.42e-05,
+   "sources": {
+    "code-reasoning": 0.000386,
+    "math-reasoning": 9.2e-05,
+    "pretrain-behaviors": 3.9e-05,
+    "sft-reasoning": 0.000483,
+    "txt360-v2": -0.000493
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.002021,
+    "math": 0.001132,
+    "text": 0.001225
+   },
+   "CK3_b41": {
+    "code": 9.2e-05,
+    "math": 4.7e-05,
+    "text": 0.000108
+   },
+   "t1_d3605": {
+    "code": 0.000729,
+    "math": 0.000378,
+    "text": -0.000147
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:50f005234155343dfcafd9755e890805e5db807a5455adea543f4fc877ce56f2",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 138.6,
+  "score_s": 254.0,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T00:04:38Z"
+ }
+}

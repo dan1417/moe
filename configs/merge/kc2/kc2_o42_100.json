@@ -1,0 +1,19 @@
+{
+ "label": "kc2_o42_100",
+ "description": "KC2 + 1.0 x our lineage since CK3",
+ "group": "kc2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.0
+  }
+ ]
+}

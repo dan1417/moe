@@ -1,0 +1,19 @@
+{
+ "label": "pub_eec31adc1c",
+ "description": "slerp(C10_S50, CD4, t=0.3) | CD4 = CODE #4 teutonic-II-110B-A7B-5ek5koe5-v56",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.3
+ }
+}

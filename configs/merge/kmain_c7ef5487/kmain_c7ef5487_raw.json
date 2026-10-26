@@ -1,0 +1,11 @@
+{
+ "label": "kmain_c7ef5487_raw",
+ "description": "the MAIN king KMAIN_c7ef5487 (uid 107, 5DAL) as is",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  }
+ ]
+}

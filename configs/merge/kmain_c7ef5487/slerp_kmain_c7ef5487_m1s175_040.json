@@ -1,0 +1,19 @@
+{
+ "label": "slerp_kmain_c7ef5487_m1s175_040",
+ "description": "SLERP(KMAIN_c7ef5487, our m1/step-175, t=0.4) per tensor",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.4
+ }
+}

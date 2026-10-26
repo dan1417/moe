@@ -1,0 +1,15 @@
+{
+ "label": "tt_h3",
+ "description": "heal_d41_015 + 3\u00b7H (repair \u00d73, keeps the txt360-qa boost)",
+ "method": "trajectory",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_heal_a1/step-50",
+   "coef": 3.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/heal_d41_015",
+   "coef": -2.0
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "label": "cpt_raw",
+ "description": "CPT EMA@150 restored from teutonic-cpt-backup, no blend with #31",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 1.0
+  }
+ ]
+}

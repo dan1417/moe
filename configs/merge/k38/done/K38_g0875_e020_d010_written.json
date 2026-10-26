@@ -1,0 +1,14 @@
+{
+ "label": "K38_g0875_e020_d010_written",
+ "description": "written checkpoint K38_g0875_e020_d010 (confirmation of the materialized weights)",
+ "method": "written",
+ "priority": 5,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/merges/K38_g0875_e020_d010",
+   "coef": 1.0
+  }
+ ],
+ "overrides": []
+}

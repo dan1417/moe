@@ -1,0 +1,81 @@
+{
+ "label": "T1_g090",
+ "description": "T1 with router bias b' = mean + 0.9\u00b7(b \u2212 mean) per layer (\u03b3 method)",
+ "method": "router-bias-gamma",
+ "vec_spec": "0 + 1\u00b7T1 {e_score_correction_bias$ center_scale {'g': 0.9}}",
+ "vecs": {
+  "T1": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "transforms": [
+  {
+   "pattern": "e_score_correction_bias$",
+   "op": "center_scale",
+   "args": {
+    "g": 0.9
+   }
+  }
+ ],
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001216,
+    "se": 7.73e-05,
+    "lcb": 0.000977,
+    "lcb30k": 0.001135
+   },
+   "code": {
+    "mu": 0.001699,
+    "se": 9.12e-05,
+    "lcb": 0.001417,
+    "lcb30k": 0.001614
+   },
+   "text": {
+    "mu": 9.6e-05,
+    "se": 5.21e-05,
+    "lcb": -6.5e-05,
+    "lcb30k": 6.2e-05
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.001413,
+    "math": 0.000536,
+    "text": 0.004195
+   },
+   "95ef7a26": {
+    "code": -3e-05,
+    "math": -1.9e-05,
+    "text": 0.000147
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "recipe:ba941adce99504aa810d03da64661a85f1d2deb96d77e975082d725a8f4783e5",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 0.8,
+  "score_s": 192.5,
+  "refilled_tensors": 44,
+  "time": "2026-10-07T16:30:56Z"
+ }
+}

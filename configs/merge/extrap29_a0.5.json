@@ -1,0 +1,14 @@
+{
+ "label": "extrap29_a0.5",
+ "description": "29 + 0.5*(29-28): extrapolate king #29's own update",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.5
+  },
+  {
+   "model": "reign:28",
+   "coef": -0.5
+  }
+ ]
+}

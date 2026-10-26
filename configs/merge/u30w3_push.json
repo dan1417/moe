@@ -1,0 +1,28 @@
+{
+ "label": "u30w3_push",
+ "description": "best direction pushed further {'attn': 0.3999999999999999}",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.17
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.13
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.068,
+    0.052
+   ]
+  }
+ ]
+}

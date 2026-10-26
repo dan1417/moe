@@ -1,0 +1,48 @@
+{
+ "label": "pub_9de34b176f",
+ "description": "model stock (TX1; M44, TX4, MA1, CD4, C10_S50) on C10_S50 x1 | M44 = MAIN #44 teutonic-II-110B-A7B-5DALwjE4-100; TX4 = TEXT #4 teutonic-II-110B-A7B-5DALwjE4-101; CD4 = CODE #4 teutonic-II-110B-A7B-5ek5koe5-v56; MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0
+  }
+ ],
+ "mode": "model_stock",
+ "mode_args": {
+  "base": 0,
+  "models": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "on": 6,
+  "scale": 1.0
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "label": "pub_d46759c471",
+ "description": "C10_S50 + toM44=0.075,toMA1=0.3 | M44 = MAIN #44 teutonic-II-110B-A7B-5DALwjE4-100; MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.625
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.3
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 0.075
+  }
+ ]
+}

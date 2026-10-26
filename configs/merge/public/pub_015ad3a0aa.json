@@ -1,0 +1,11 @@
+{
+ "label": "pub_015ad3a0aa",
+ "description": "raw: C10C_F as is",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10c/final",
+   "coef": 1.0
+  }
+ ]
+}

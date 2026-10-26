@@ -1,0 +1,59 @@
+{
+ "label": "s2_703b6ddfb8",
+ "description": "KTEXT_9a39afee + CK1D=0.25,DC1=0.5 | layers 0-14 x0.5 15-29 x1 30-44 x1",
+ "group": "search2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.25
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.25,
+    -0.25,
+    0.125,
+    -0.125
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.25,
+    -0.25,
+    0.125,
+    -0.125
+   ]
+  },
+  {
+   "pattern": "layers\\.([0-9]|1[0-4])\\.",
+   "coefs": [
+    1.0,
+    0.25,
+    -0.25,
+    0.125,
+    -0.125
+   ]
+  }
+ ]
+}

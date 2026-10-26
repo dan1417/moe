@@ -1,0 +1,23 @@
+{
+ "label": "extrap29_headonly_a0.5",
+ "description": "extrapolate only lm_head by 0.5",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:28",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "^lm_head\\.",
+   "coefs": [
+    1.5,
+    -0.5
+   ]
+  }
+ ]
+}

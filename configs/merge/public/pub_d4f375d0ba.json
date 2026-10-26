@@ -1,0 +1,37 @@
+{
+ "label": "pub_d4f375d0ba",
+ "description": "M45 + stepTX6=0.5 | only experts | M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/76d55249acbc4868d53e5c1260d53fa521ee643d1f0bb7f97811f61410e5814b",
+   "coef": -0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5,
+    -0.5
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.0,
+    0.0
+   ]
+  }
+ ]
+}

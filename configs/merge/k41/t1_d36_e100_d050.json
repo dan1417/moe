@@ -1,0 +1,103 @@
+{
+ "label": "t1_d36_e100_d050",
+ "description": "T1 + D36 with 1.0\u00b7D36 on routed experts, 0.5\u00b7D36 elsewhere (D36's gain lives in the experts)",
+ "method": "module-split",
+ "vec_spec": "K41 + 1\u00b7T + 0.5\u00b7D36 [experts: T=1, D36=1]",
+ "vecs": {
+  "T": 1.0,
+  "D36": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.0,
+    1.0,
+    1.0
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001801,
+    "se": 9.04e-05,
+    "lcb": 0.001522,
+    "lcb30k": 0.001711
+   },
+   "code": {
+    "mu": 0.002629,
+    "se": 0.000109,
+    "lcb": 0.002292,
+    "lcb30k": 0.002533
+   },
+   "text": {
+    "mu": -0.000329,
+    "se": 0.0001063,
+    "lcb": -0.000657,
+    "lcb30k": -0.000396
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.002391,
+   "lcb": 0.001795,
+   "se": 0.0002014,
+   "sources": {
+    "code-reasoning": 0.002099,
+    "math-reasoning": 0.001394,
+    "pretrain-behaviors": 0.003308,
+    "sft-reasoning": 0.00271,
+    "txt360-v2": 0.002546
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002806,
+    "math": 0.001302,
+    "text": 0.003126
+   },
+   "95ef7a26": {
+    "code": 0.001363,
+    "math": 0.000748,
+    "text": -0.000922
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:ed2c7e3958fab39d0b408f2770bb6e42326c5d9c9e9cb028786b2267b1869a15",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 15.7,
+  "score_s": 255.3,
+  "refilled_tensors": 442,
+  "time": "2026-10-07T18:40:21Z"
+ }
+}

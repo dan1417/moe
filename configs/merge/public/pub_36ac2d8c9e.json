@@ -1,0 +1,11 @@
+{
+ "label": "pub_36ac2d8c9e",
+ "description": "raw: M42 as is | M42 = MAIN #42 teutonic-II-110B-A7B-5ek5koe5-v53",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/M42_b41",
+   "coef": 1.0
+  }
+ ]
+}

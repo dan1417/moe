@@ -1,0 +1,14 @@
+{
+ "label": "K36_raw",
+ "description": "king #36 itself (A-branch tip, 5Ek5KoE5) vs #38 \u2014 sample calibration (chain says \u2248 \u22120.0071)",
+ "method": "raw-king",
+ "priority": 19,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king36",
+   "coef": 1.0
+  }
+ ],
+ "overrides": []
+}

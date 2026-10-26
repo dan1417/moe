@@ -1,0 +1,19 @@
+{
+ "label": "pub_35b5a08a5a",
+ "description": "MA2 + stepM36=-0.15 | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/M36_b41",
+   "coef": -0.15
+  },
+  {
+   "model": "/data/teutonic/models/fa3c2716dad756850afe300b426e674992b7de5c29f61a38c3ea0451d1b39d9a",
+   "coef": 0.15
+  }
+ ]
+}

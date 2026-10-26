@@ -1,0 +1,27 @@
+{
+ "label": "soup_k43_c1_040_dc1_050_ck1_025",
+ "description": "0.6 x #43 + 0.4 x our final + 0.5 x our training step + 0.25 x CK1 delta",
+ "group": "code",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 0.6
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.9
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.25
+  }
+ ]
+}

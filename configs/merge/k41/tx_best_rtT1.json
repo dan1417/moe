@@ -1,0 +1,109 @@
+{
+ "label": "tx_best_rtT1",
+ "description": "TEXT: best recipe (#42 + 0.25\u00b7D41, experts +0.15\u00b7P) but the routers (mlp.gate) taken from the TEXT king T1",
+ "method": "task-arith",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 [experts: CK3=1, D41=0.25, P=0.15] [router: T1=1, CK3=0, D41=0]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000163,
+    "se": 5.52e-05,
+    "lcb": -0.000334,
+    "lcb30k": -0.000218
+   },
+   "code": {
+    "mu": 0.000186,
+    "se": 6.72e-05,
+    "lcb": -2.2e-05,
+    "lcb30k": 0.000134
+   },
+   "text": {
+    "mu": 0.001961,
+    "se": 0.0001969,
+    "lcb": 0.001353,
+    "lcb30k": 0.001841
+   }
+  },
+  "main": null,
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001356,
+    "math": 0.000709,
+    "text": 0.002359
+   },
+   "CK3_b41": {
+    "code": -0.000573,
+    "math": -0.000376,
+    "text": 0.001242
+   },
+   "t1_d3605": {
+    "code": 6.4e-05,
+    "math": -4.5e-05,
+    "text": 0.000987
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": null,
+  "model_id": "recipe:43f854bf5eee35088ee021ab3980046792325133b7a18dcdb369a0fc31a57421",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 162.9,
+  "score_s": 189.3,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T08:22:22Z"
+ }
+}

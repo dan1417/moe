@@ -1,0 +1,11 @@
+{
+ "label": "pub_c70a262dc8",
+ "description": "raw: MA1 as is | MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  }
+ ]
+}

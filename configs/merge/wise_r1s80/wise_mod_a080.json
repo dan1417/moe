@@ -1,0 +1,53 @@
+{
+ "label": "wise_mod_a080",
+ "description": "parent/step-80 + 0.8*\u0394 with experts x1.15 attn/head x0.7",
+ "group": "wise_r1s80",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246/step-80",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246_r1/step-80",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246/step-80",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.9199999999999999,
+    -0.9199999999999999
+   ]
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.5599999999999999,
+    -0.5599999999999999
+   ]
+  },
+  {
+   "pattern": "^lm_head\\.|\\.shared_experts\\.",
+   "coefs": [
+    1.0,
+    0.5599999999999999,
+    -0.5599999999999999
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.8,
+    -0.8
+   ]
+  }
+ ]
+}

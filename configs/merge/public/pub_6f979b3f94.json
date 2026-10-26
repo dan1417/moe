@@ -1,0 +1,15 @@
+{
+ "label": "pub_6f979b3f94",
+ "description": "probe: C10_S50 + 0.45\u00b7(MA1 - C10_S50) = toward MA1 | MA1 = MATH #1 teutonic-II-110B-A7B-5ek5koe5-v54",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.55
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.45
+  }
+ ]
+}

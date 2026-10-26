@@ -1,0 +1,19 @@
+{
+ "label": "wise_a080",
+ "description": "parent/step-80 + 0.8*(r1/step-80 - parent/step-80)  [WiSE/ExPO]",
+ "group": "wise_r1s80",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246/step-80",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246_r1/step-80",
+   "coef": 0.8
+  },
+  {
+   "model": "/data/teutonic/ckpt/math_step-60_10130246/step-80",
+   "coef": -0.8
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "label": "s3_ed3e01b25b",
+ "description": "KCODE_0c681d78 + toTX=0.3",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c2_r1/step-25",
+   "coef": 0.3
+  }
+ ]
+}

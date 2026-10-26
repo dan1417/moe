@@ -1,0 +1,19 @@
+{
+ "label": "m4t_d2527cf03d",
+ "description": "MA2 + 1.00 (ours math_wise_r1s80 - its start)",
+ "group": "m4t",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/submit/best_math_wise_exp_a100",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/submit/train_math_pub_1822d4cbda",
+   "coef": -1.0
+  }
+ ]
+}

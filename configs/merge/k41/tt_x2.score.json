@@ -1,0 +1,110 @@
+{
+ "label": "tt_x2",
+ "text_mu": 0.002117,
+ "lcb": 0.001695,
+ "text_se": 0.0001313,
+ "splits": {
+  "code": 0.001088,
+  "math": 0.000518,
+  "text": 0.002688
+ },
+ "categories": {
+  "code-reasoning/code-no-thinking": {
+   "n": 34,
+   "mu_hat": 0.001526
+  },
+  "code-reasoning/code-no-thinking-hard": {
+   "n": 23,
+   "mu_hat": 0.000871
+  },
+  "code-reasoning/code-task-synthesis": {
+   "n": 15,
+   "mu_hat": 0.001367
+  },
+  "code-reasoning/code-thinking-hard": {
+   "n": 27,
+   "mu_hat": 0.000441
+  },
+  "code-reasoning/code-thinking-v0": {
+   "n": 43,
+   "mu_hat": 0.001044
+  },
+  "code-reasoning/code-thinking-v1": {
+   "n": 24,
+   "mu_hat": 0.001163
+  },
+  "code-reasoning/codeio": {
+   "n": 2,
+   "mu_hat": -0.002036
+  },
+  "math-reasoning/math-dialogue": {
+   "n": 161,
+   "mu_hat": 0.000617
+  },
+  "math-reasoning/math-rewrite": {
+   "n": 57,
+   "mu_hat": 0.0002
+  },
+  "math-reasoning/math-thinking-oss": {
+   "n": 30,
+   "mu_hat": 0.000933
+  },
+  "math-reasoning/math-thinking-qwen": {
+   "n": 54,
+   "mu_hat": 0.00018
+  },
+  "math-reasoning/socratic-math-dialogue": {
+   "n": 12,
+   "mu_hat": 0.001144
+  },
+  "pretrain-behaviors/data-science": {
+   "n": 43,
+   "mu_hat": 0.001452
+  },
+  "pretrain-behaviors/format-rewrites": {
+   "n": 35,
+   "mu_hat": 0.000495
+  },
+  "pretrain-behaviors/games": {
+   "n": 11,
+   "mu_hat": 5.5e-05
+  },
+  "pretrain-behaviors/general": {
+   "n": 241,
+   "mu_hat": 0.001785
+  },
+  "pretrain-behaviors/other": {
+   "n": 36,
+   "mu_hat": 0.001069
+  },
+  "pretrain-behaviors/planning": {
+   "n": 323,
+   "mu_hat": 0.001667
+  },
+  "pretrain-behaviors/reasoning": {
+   "n": 111,
+   "mu_hat": 0.001039
+  },
+  "sft-reasoning/3efforts-pretrain": {
+   "n": 7,
+   "mu_hat": 0.001444
+  },
+  "sft-reasoning/instruction-following": {
+   "n": 14,
+   "mu_hat": 0.002
+  },
+  "txt360-v2/txt360-qa": {
+   "n": 453,
+   "mu_hat": 0.007458
+  },
+  "txt360-v2/web-high-medium": {
+   "n": 305,
+   "mu_hat": -0.000194
+  },
+  "txt360-v2/web-high-nltk-qa": {
+   "n": 339,
+   "mu_hat": 0.000549
+  }
+ },
+ "result_file": "/root/workspace/MoE/eval_cache/results/20261009T112122Z_duel.json"
+}

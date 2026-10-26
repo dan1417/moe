@@ -1,0 +1,25 @@
+{
+ "label": "u30_dagree_0.25_0.2",
+ "description": "#30u: sign-agreement weighting (0.25,0.2) vs (0.1,0.08)",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.0
+  }
+ ],
+ "mode": "delta_agree",
+ "mode_args": {
+  "a_agree": 0.25,
+  "b_agree": 0.2,
+  "a_dis": 0.1,
+  "b_dis": 0.08
+ }
+}

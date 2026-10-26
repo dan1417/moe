@@ -1,0 +1,11 @@
+{
+ "label": "ref_m1s175",
+ "description": "our MAIN training checkpoint m1/step-175 as is (training reference vs the new MAIN king)",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  }
+ ]
+}

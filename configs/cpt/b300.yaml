@@ -1,0 +1,51 @@
+# Full-parameter CPT of the current king on 8×B300 (288 GB each).
+#   python -m torch.distributed.run --standalone --nproc_per_node=8 -m src.cpt.train --config configs/cpt/b300.yaml
+#
+# Memory/GPU (110.3B params): fp32 master 55 GB + fp32 grads 55 GB + AdamW m,v 110 GB = 220 GB
+# + checkpointed activations (micro_batch 4) ~25-35 GB. EMA lives in host RAM (55 GB/rank).
+king_dir: /data/king                  # current king snapshot (download_king.py)
+output_dir: /data/runs/line_a         # one directory per training line
+seed: 0
+attention: flash_attention_4          # validator production backend (native sinks, asymmetric V)
+activation_checkpointing: true
+
+# Router weights and the noaux bias only decide routing; winners leave them untouched,
+# and routing drift is the easiest way to regress a source. Embeddings stay trainable.
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+
+optimizer:
+  lr: 1.0e-5          # sweep 5e-6 .. 2e-5; recent winning deltas are ~2-3% relative on trained tensors
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0   # CPT on a converged king: no decay toward zero
+  grad_clip: 1.0
+
+schedule:
+  total_steps: 1200   # 1200 × 8 × 4 × 8 × 2048 ≈ 0.63B tokens
+  warmup_steps: 50
+  decay_steps: 300    # linear cooldown at the end
+  min_lr_ratio: 0.0
+
+ema:
+  enabled: true
+  decay: 0.99         # "EMA-100": ~100-step horizon (top miner's recipe)
+  every: 5
+
+data:
+  pool_dir: /data/pools/line_a        # scripts/data/build_train_pool.py
+  val_dir: /data/pools/val            # held-out, different seed family
+  val_n: 1024
+  micro_batch: 4
+  grad_accum: 8                       # 8 ranks × 4 × 8 = 256 seqs = 524K tokens/step
+  seed: 0
+
+log_every: 10
+eval_every: 100
+export_every: 300     # bf16 HF exports (raw + EMA) for parity eval / merging
+export_raw: true
+checkpoint:
+  every: 300          # DCP (fp32 model + optimizer ≈ 1.3 TB); set 0 to rely on exports
+  keep: 1
+  resume: true

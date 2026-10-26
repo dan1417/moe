@@ -1,0 +1,23 @@
+{
+ "label": "k43_o42_kc2half",
+ "description": "#43 + our lineage since #42 + 0.5 x 5DAL's step (KC2 - #43)",
+ "group": "kc2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.0
+  }
+ ]
+}

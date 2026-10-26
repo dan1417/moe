@@ -1,0 +1,15 @@
+{
+ "label": "pub_983d0f4879",
+ "description": "M45 + stepM45=-0.3 | M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 0.3
+  }
+ ]
+}

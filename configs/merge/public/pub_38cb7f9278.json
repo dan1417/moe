@@ -1,0 +1,32 @@
+{
+ "label": "pub_38cb7f9278",
+ "description": "M45 + toCD5_on_M45=0.4 | crumbs density 0.5 | only experts | M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    0,
+    0.4
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "sum",
+  "density": 0.5,
+  "top_drop": 0.02,
+  "exclude": [
+   "^(?!.*mlp\\.experts\\.).*"
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "label": "pub_5a728dc9da",
+ "description": "probe: C10_S50 - 0.3\u00b7(C11_S25 - C10_S50) = away from (ExPO) C11_S25",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.3
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c11/step-25",
+   "coef": -0.3
+  }
+ ]
+}

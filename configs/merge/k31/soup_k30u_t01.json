@@ -1,0 +1,19 @@
+{
+ "label": "soup_k30u_t01",
+ "description": "0.9*#31u + 0.1*k30u",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 0.9
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.1
+  }
+ ],
+ "overrides": []
+}

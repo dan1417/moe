@@ -1,0 +1,19 @@
+{
+ "label": "slerp_ktext_9a39afee_c1_040",
+ "description": "SLERP(KTEXT_9a39afee, our final, t=0.4) per tensor",
+ "group": "ktext_9a39afee",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.4
+ }
+}

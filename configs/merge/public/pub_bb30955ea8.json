@@ -1,0 +1,15 @@
+{
+ "label": "pub_bb30955ea8",
+ "description": "CD5 + stepCD5=-0.2 | CD5 = CODE #5 teutonic-II-110B-A7B-holly",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/e2da3b53accc66b3c93760c2c94beb73d321ce0659fe40b47f332a95b80a92c7",
+   "coef": 0.8
+  },
+  {
+   "model": "/data/teutonic/models/CD4_b41",
+   "coef": 0.2
+  }
+ ]
+}

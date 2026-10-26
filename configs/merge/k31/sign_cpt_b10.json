@@ -1,0 +1,22 @@
+{
+ "label": "sign_cpt_b10",
+ "description": "#31u + 1.0*(CPT-k30u) only where that step agrees in sign with (#31u-k30u)",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "mode": "sign_agree",
+ "mode_args": {
+  "beta": 1.0
+ }
+}

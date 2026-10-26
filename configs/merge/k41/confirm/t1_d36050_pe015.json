@@ -1,0 +1,45 @@
+{
+ "label": "t1_d36050_pe015",
+ "runs": [
+  {
+   "competition": "code",
+   "sample": "9109dbf8-428e78e326361dbc",
+   "kind": "validator-verdict",
+   "n": 3000,
+   "mu": 0.002893,
+   "lcb": 0.002511,
+   "se": 0.0001451,
+   "win_rate": 0.7687,
+   "delta": 0.002,
+   "accepted_on_prefix": true,
+   "sources": {
+    "code": 0.00255,
+    "math": 0.001287,
+    "text": 0.006075
+   },
+   "lcb30k": 0.002754,
+   "king": "1f1efb68",
+   "time": "2026-10-07T19:14:40Z"
+  },
+  {
+   "competition": "math",
+   "sample": "a4981bea-ffba01c4c4ff672c",
+   "kind": "validator-verdict",
+   "n": 3000,
+   "mu": 0.002212,
+   "lcb": 0.001861,
+   "se": 0.0001417,
+   "win_rate": 0.7407,
+   "delta": 0.002,
+   "accepted_on_prefix": false,
+   "sources": {
+    "code": 0.002431,
+    "math": 0.001332,
+    "text": 0.006031
+   },
+   "lcb30k": 0.002078,
+   "king": "1f1efb68",
+   "time": "2026-10-07T19:14:40Z"
+  }
+ ]
+}

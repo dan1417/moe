@@ -1,0 +1,29 @@
+{
+ "label": "K38_s38ties_d050_e025",
+ "description": "#38 + 0.25\u00b7trim50%(S38) on routed experts only (TIES-style denoised momentum)",
+ "method": "ties",
+ "priority": 28,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": 1.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.5,
+  "beta": 0.25,
+  "exclude": [
+   "^(?!.*\\.mlp\\.experts\\.)"
+  ]
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "label": "kmath_ddd9e626_dc1_050",
+ "description": "KMATH_ddd9e626 + 0.5 x our training step",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "^lm_head\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "label": "K38_s38_e020_d010_h0"
+}

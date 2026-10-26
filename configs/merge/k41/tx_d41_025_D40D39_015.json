@@ -1,0 +1,125 @@
+{
+ "label": "tx_d41_025_D40D39_015",
+ "description": "TEXT: best recipe + 0.15\u00b7(#40\u2212#39) + 0.15\u00b7(#39\u2212#38) all tensors",
+ "method": "trajectory",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 + 0.15\u00b7D40 + 0.15\u00b7D39 [experts: CK3=1, D41=0.25, D40=0.15, D39=0.15, P=0.15]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25,
+  "D40": 0.15,
+  "D39": 0.15
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d39_38q",
+   "coef": 0.15
+  },
+  {
+   "model": "/data/teutonic/vec/d40_39q",
+   "coef": 0.15
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0,
+    0.15,
+    0.15
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000282,
+    "se": 5.55e-05,
+    "lcb": -0.000454,
+    "lcb30k": -0.000338
+   },
+   "code": {
+    "mu": -8.2e-05,
+    "se": 7.07e-05,
+    "lcb": -0.000301,
+    "lcb30k": -0.000137
+   },
+   "text": {
+    "mu": 0.001691,
+    "se": 0.0002057,
+    "lcb": 0.001056,
+    "lcb30k": 0.001566
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000792,
+   "lcb": -0.001216,
+   "se": 0.0001498,
+   "sources": {
+    "code-reasoning": -0.000297,
+    "math-reasoning": -0.000555,
+    "pretrain-behaviors": -0.001155,
+    "sft-reasoning": -0.000886,
+    "txt360-v2": -0.000925
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001048,
+    "math": 0.000671,
+    "text": 0.002048
+   },
+   "CK3_b41": {
+    "code": -0.000881,
+    "math": -0.000414,
+    "text": 0.00093
+   },
+   "t1_d3605": {
+    "code": -0.000245,
+    "math": -8.3e-05,
+    "text": 0.000675
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:fefe1d4fa3faab49f9592ac1d0df0c00ce12ec077f76841c8169c80987e605f3",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 577.1,
+  "score_s": 255.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T09:11:40Z"
+ }
+}

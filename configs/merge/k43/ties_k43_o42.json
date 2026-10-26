@@ -1,0 +1,32 @@
+{
+ "label": "ties_k43_o42",
+ "description": "TIES (sign election, no trim): #42 + elected-sign sum of both steps since #42",
+ "group": "non-linear",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "mode": "dare_ties",
+ "mode_args": {
+  "weights": [
+   1.0,
+   1.0
+  ],
+  "densities": [
+   1.0,
+   1.0
+  ],
+  "lambda": 1.0,
+  "normalize": false
+ }
+}

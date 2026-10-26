@@ -1,0 +1,61 @@
+{
+ "label": "vties_k50_d070_p012",
+ "description": "TIES: trim50% + sign election over 0.7\u00b7D36 + 0.12\u00b7P40_36",
+ "method": "vec_ties",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.7
+   ],
+   [
+    0,
+    1,
+    0.12
+   ]
+  ],
+  "density": 0.5,
+  "lambda": 1.0
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": -0.000354,
+  "lcb": -0.000762,
+  "robust_lcb": null,
+  "win_rate": 0.4825,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.897529,
+  "sources": {
+   "code-reasoning": 0.000389,
+   "math-reasoning": 0.000276,
+   "pretrain-behaviors": 0.000874,
+   "sft-reasoning": -0.000424,
+   "txt360-v2": -0.003619
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:cbfad2082c14178bc81f2e3a9fc0a4284bd135ee8828186286b2adabb1c62a2f",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 518.5,
+  "score_s": 51.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T01:22:13Z"
+ }
+}

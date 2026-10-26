@@ -1,0 +1,47 @@
+{
+ "label": "tx_best_U3T_050",
+ "description": "best TEXT recipe + 0.5\u00b7(U3 \u2212 T1): the user's myzxnk3nvdm6 delta (head/late-attn heavy) on all tensors",
+ "method": "transplant",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 + 0.5\u00b7U3T [experts: CK3=1, D41=0.25, P=0.15, U3T=0.5]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25,
+  "U3T": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/hf_myzxnk3nvdm6",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    -0.35,
+    1.0,
+    0.5
+   ]
+  }
+ ],
+ "priority": -80.0,
+ "main_limit": 800
+}

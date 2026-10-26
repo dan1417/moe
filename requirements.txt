@@ -1,0 +1,16 @@
+torch>=2.4.0
+transformers>=4.47.0
+accelerate>=0.35.0
+safetensors>=0.4.0
+numpy>=1.26.0
+requests>=2.31.0
+tqdm
+pyyaml
+# Installed by scripts/setup/install_flash_attn.sh or optimize_ml_env.py (arch-specific).
+# flash-attn>=2.6.0
+# Bare transformer-engine is an empty meta package — use:
+#   pip install --no-build-isolation "transformer-engine[pytorch,core_cu13]==2.18.0"
+# after nvidia-cuda-nvcc + nvidia-cuda-cccl (see docs/ML_ENV_GUIDE.md).
+# transformer-engine>=2.0.0
+triton>=3.0.0
+wandb

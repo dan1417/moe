@@ -1,0 +1,33 @@
+{
+ "label": "K38_s38_e020_d010_n4000",
+ "description": "momentum (experts 0.20, dense 0.10) promoted to 4000 seqs",
+ "method": "promotion",
+ "priority": 29,
+ "limit": 4000,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

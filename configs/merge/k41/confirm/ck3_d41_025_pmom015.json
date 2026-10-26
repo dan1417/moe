@@ -1,0 +1,25 @@
+{
+ "label": "ck3_d41_025_pmom015",
+ "runs": [
+  {
+   "competition": "text",
+   "sample": "b5318eaf-e83a2099ebe9d06f",
+   "kind": "validator-verdict",
+   "n": 3000,
+   "mu": 0.001889,
+   "lcb": 0.001525,
+   "se": 0.0001204,
+   "win_rate": 0.618,
+   "delta": 0.002,
+   "accepted_on_prefix": false,
+   "sources": {
+    "code": 0.001288,
+    "math": 0.000644,
+    "text": 0.002288
+   },
+   "lcb30k": 0.001772,
+   "king": "95ef7a26",
+   "time": "2026-10-08T03:04:02Z"
+  }
+ ]
+}

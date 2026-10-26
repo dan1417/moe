@@ -1,0 +1,15 @@
+{
+ "label": "ak_kt_mom100",
+ "description": "KTEXT + 1.0 S_T (5DAL's TEXT step once more)",
+ "group": "allkings",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 2.0
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": -1.0
+  }
+ ]
+}

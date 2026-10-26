@@ -1,0 +1,18 @@
+{
+ "label": "base_U2",
+ "description": "as-is: user model K38_g0875_e020_d010 (U2) vs all kings",
+ "method": "baseline",
+ "vec_spec": "0 + 1\u00b7U2",
+ "vecs": {
+  "U2": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/hf_K38_g0875_e020_d010",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "priority": -90.0,
+ "main_limit": 800
+}

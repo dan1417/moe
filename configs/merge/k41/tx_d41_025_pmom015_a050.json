@@ -1,0 +1,122 @@
+{
+ "label": "tx_d41_025_pmom015_a050",
+ "description": "TEXT: best recipe with attention at 0.50\u00b7D41",
+ "method": "module-split",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 [experts: CK3=1, D41=0.25, P=0.15] [attn: CK3=1, D41=0.5]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0
+   ]
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    0.5,
+    -0.5,
+    0.0,
+    1.0
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000311,
+    "se": 5.59e-05,
+    "lcb": -0.000483,
+    "lcb30k": -0.000367
+   },
+   "code": {
+    "mu": -6.6e-05,
+    "se": 6.96e-05,
+    "lcb": -0.000281,
+    "lcb30k": -0.00012
+   },
+   "text": {
+    "mu": 0.001806,
+    "se": 0.0002029,
+    "lcb": 0.001179,
+    "lcb30k": 0.001682
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000833,
+   "lcb": -0.001227,
+   "se": 0.0001336,
+   "sources": {
+    "code-reasoning": -0.000255,
+    "math-reasoning": -0.000642,
+    "pretrain-behaviors": -0.001098,
+    "sft-reasoning": -0.002025,
+    "txt360-v2": -0.001071
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001049,
+    "math": 0.000592,
+    "text": 0.002228
+   },
+   "CK3_b41": {
+    "code": -0.00088,
+    "math": -0.000493,
+    "text": 0.00111
+   },
+   "t1_d3605": {
+    "code": -0.000243,
+    "math": -0.000162,
+    "text": 0.000855
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:a1919fa63335241ab94b2f3c7b734f4b7f7e3c3fef35ee1e19cc2c9454030260",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 17.5,
+  "score_s": 255.3,
+  "refilled_tensors": 170,
+  "time": "2026-10-08T05:26:47Z"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "label": "pub_de8278aa14",
+ "description": "slerp(M45, MA2, t=0.2) | M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102; MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.2
+ }
+}

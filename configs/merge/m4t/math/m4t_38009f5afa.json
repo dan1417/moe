@@ -1,0 +1,15 @@
+{
+ "label": "m4t_38009f5afa",
+ "description": "0.15 MA2 + 0.85 ours math_wise_r1s80",
+ "group": "m4t",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 0.15
+  },
+  {
+   "model": "/data/teutonic/submit/best_math_wise_exp_a100",
+   "coef": 0.85
+  }
+ ]
+}

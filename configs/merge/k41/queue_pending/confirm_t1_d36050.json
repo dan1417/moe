@@ -1,0 +1,18 @@
+{
+ "kind": "plugin",
+ "module": "confirm41",
+ "label": "t1_d36050",
+ "priority": 50,
+ "runs": [
+  {
+   "competition": "code",
+   "sample": "tag:A",
+   "limit": 3000
+  },
+  {
+   "competition": "mix",
+   "sample": "tag:B",
+   "limit": 2400
+  }
+ ]
+}

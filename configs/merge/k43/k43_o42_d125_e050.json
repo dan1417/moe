@@ -1,0 +1,29 @@
+{
+ "label": "k43_o42_d125_e050",
+ "description": "#43 + our lineage since #42: 1.25 x on dense tensors, 0.5 x on routed experts",
+ "group": "module-split",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.25
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.25
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5,
+    -0.5
+   ]
+  }
+ ]
+}

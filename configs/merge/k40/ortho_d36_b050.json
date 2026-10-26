@@ -1,0 +1,48 @@
+{
+ "label": "ortho_d36_b050",
+ "description": "#40 + 0.5\u00b7(D36 \u27c2 (#40 \u2212 #35)) per tensor",
+ "method": "orthogonal",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "orthogonal",
+ "mode_args": {
+  "beta": 0.5
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": -0.000934,
+  "lcb": -0.001328,
+  "robust_lcb": null,
+  "win_rate": 0.445,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.898109,
+  "sources": {
+   "code-reasoning": -0.000641,
+   "math-reasoning": 0.000251,
+   "pretrain-behaviors": 0.000731,
+   "sft-reasoning": -0.000957,
+   "txt360-v2": -0.005276
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:abc9be656b5f1e81bb2bde467c186f06784fb4147789bf4ed5655659e8cdccbc",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 264.0,
+  "score_s": 50.9,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T01:01:09Z"
+ }
+}

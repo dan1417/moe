@@ -1,0 +1,18 @@
+{
+ "label": "u30_dstack_0.25_0.0",
+ "description": "#30u + 0.25*D26 + 0.0*D25",
+ "terms": [
+  {
+   "model": "reign:30",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/deltas/d26_22",
+   "coef": 0.25
+  },
+  {
+   "model": "/opt/teutonic/deltas/d25_23",
+   "coef": 0.0
+  }
+ ]
+}

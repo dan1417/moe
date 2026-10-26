@@ -1,0 +1,26 @@
+{
+ "label": "stack_26x0.15_25x0.3",
+ "description": "29 + 0.15*(26-22) + 0.3*(25-23)",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:26",
+   "coef": 0.15
+  },
+  {
+   "model": "reign:22",
+   "coef": -0.15
+  },
+  {
+   "model": "reign:25",
+   "coef": 0.3
+  },
+  {
+   "model": "reign:23",
+   "coef": -0.3
+  }
+ ]
+}

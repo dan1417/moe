@@ -1,0 +1,99 @@
+{
+ "label": "ck3_ours050",
+ "description": "CK3 + 0.5\u00b7(CK1\u2212T1) = MM1 + 0.75\u00b7(our delta)",
+ "method": "cross-merge",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.5\u00b7OURS",
+ "vecs": {
+  "CK3": 1.0,
+  "OURS": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.5
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 4e-06,
+    "se": 3.7e-05,
+    "lcb": -0.000111,
+    "lcb30k": -2.7e-05
+   },
+   "code": {
+    "mu": 0.000538,
+    "se": 6.13e-05,
+    "lcb": 0.000348,
+    "lcb30k": 0.000495
+   },
+   "text": {
+    "mu": 0.001138,
+    "se": 0.0001166,
+    "lcb": 0.000778,
+    "lcb30k": 0.001065
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000222,
+   "lcb": -0.000443,
+   "se": 7.11e-05,
+   "sources": {
+    "code-reasoning": 8.3e-05,
+    "math-reasoning": 1.7e-05,
+    "pretrain-behaviors": -1e-06,
+    "sft-reasoning": 0.000384,
+    "txt360-v2": -0.00113
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.002079,
+    "math": 0.001095,
+    "text": 0.000946
+   },
+   "CK3_b41": {
+    "code": 0.00015,
+    "math": 1e-05,
+    "text": -0.000172
+   },
+   "t1_d3605": {
+    "code": 0.000787,
+    "math": 0.000341,
+    "text": -0.000427
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:f6cff075a607af6ead7463cdf8d6cce1070d3065d791a498b945e0648bd16685",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 139.6,
+  "score_s": 254.0,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T00:11:12Z"
+ }
+}

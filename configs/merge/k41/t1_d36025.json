@@ -1,0 +1,94 @@
+{
+ "label": "t1_d36025",
+ "description": "T1 + 0.25\u00b7D36 (5Ek5Ko's step, outside 5DALwjE4's run)",
+ "method": "task-arith",
+ "vec_spec": "K41 + 1\u00b7T + 0.25\u00b7D36",
+ "vecs": {
+  "T": 1.0,
+  "D36": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.25
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001776,
+    "se": 8.18e-05,
+    "lcb": 0.001523,
+    "lcb30k": 0.00169
+   },
+   "code": {
+    "mu": 0.00246,
+    "se": 9.66e-05,
+    "lcb": 0.002162,
+    "lcb30k": 0.00237
+   },
+   "text": {
+    "mu": 0.000579,
+    "se": 5.81e-05,
+    "lcb": 0.0004,
+    "lcb30k": 0.000542
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.002598,
+   "lcb": 0.002056,
+   "se": 0.0002014,
+   "sources": {
+    "code-reasoning": 0.001709,
+    "math-reasoning": 0.000975,
+    "pretrain-behaviors": 0.002545,
+    "sft-reasoning": 0.001515,
+    "txt360-v2": 0.005572
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002305,
+    "math": 0.001061,
+    "text": 0.004582
+   },
+   "95ef7a26": {
+    "code": 0.000862,
+    "math": 0.000506,
+    "text": 0.000535
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:a5b2187bf637a91105fce712eac7433cb1faded9b48684b72f5f615ab3b74932",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 201.7,
+  "score_s": 254.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T17:07:10Z"
+ }
+}

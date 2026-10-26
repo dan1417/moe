@@ -1,0 +1,100 @@
+{
+ "label": "ck3_ours050_S125",
+ "description": "CK3 + 0.5\u00b7(CK1\u2212T1) + 0.25\u00b7S  (= CK3 + 0.25\u00b7CK3T + 0.4375\u00b7OURS)",
+ "method": "cross-merge",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.4375\u00b7OURS + 0.25\u00b7CK3T",
+ "vecs": {
+  "CK3": 1.0,
+  "OURS": 0.4375,
+  "CK3T": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.6875
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.25
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.4375
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000177,
+    "se": 4.11e-05,
+    "lcb": -0.000304,
+    "lcb30k": -0.00021
+   },
+   "code": {
+    "mu": 0.000274,
+    "se": 6.84e-05,
+    "lcb": 6.2e-05,
+    "lcb30k": 0.000225
+   },
+   "text": {
+    "mu": 0.000637,
+    "se": 0.0001271,
+    "lcb": 0.000244,
+    "lcb30k": 0.000557
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000444,
+   "lcb": -0.000696,
+   "se": 8.35e-05,
+   "sources": {
+    "code-reasoning": 8.3e-05,
+    "math-reasoning": 3e-06,
+    "pretrain-behaviors": -0.000176,
+    "sft-reasoning": 0.00054,
+    "txt360-v2": -0.001888
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001857,
+    "math": 0.001024,
+    "text": 0.000292
+   },
+   "CK3_b41": {
+    "code": -7.2e-05,
+    "math": -6.1e-05,
+    "text": -0.000825
+   },
+   "t1_d3605": {
+    "code": 0.000565,
+    "math": 0.000271,
+    "text": -0.00108
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:7f8c0feae245a36c480653167e00b1ec9d351c0cfa4bb9693b65191100d32267",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 141.6,
+  "score_s": 254.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T01:16:40Z"
+ }
+}

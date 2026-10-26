@@ -1,0 +1,19 @@
+{
+ "label": "pub_0165c745bb",
+ "description": "slerp(M45, TX4, t=0.3) | TX4 = TEXT #4 teutonic-II-110B-A7B-5DALwjE4-101; M45 = MAIN #45 teutonic-II-110B-A7B-5DALwjE4-102",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.3
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "label": "task_ap125",
+ "description": "#31u + 1.25*(CPT - k30u): transplant the CPT training step",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 1.25
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": -1.25
+  }
+ ],
+ "overrides": []
+}

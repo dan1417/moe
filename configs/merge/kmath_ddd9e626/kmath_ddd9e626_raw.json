@@ -1,0 +1,11 @@
+{
+ "label": "kmath_ddd9e626_raw",
+ "description": "new king KMATH_ddd9e626 as is (parent K43; reference)",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  }
+ ]
+}

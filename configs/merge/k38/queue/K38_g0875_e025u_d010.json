@@ -1,0 +1,47 @@
+{
+ "label": "K38_g0875_e025u_d010",
+ "description": "\u03b3 + momentum: upper-layer experts (9\u201344) 0.25, lower experts (0\u20138) 0.10, dense 0.10",
+ "method": "momentum-shape",
+ "priority": 20,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "model\\.layers\\.([0-8])\\..*.mlp\\.experts\\.",
+   "coefs": [
+    1.1,
+    -0.1
+   ]
+  },
+  {
+   "pattern": "model\\.layers\\.([0-8])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.1,
+    -0.1
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.25,
+    -0.25
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

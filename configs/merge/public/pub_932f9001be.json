@@ -1,0 +1,71 @@
+{
+ "label": "pub_932f9001be",
+ "description": "MA2 + stepM36=0.1,stepM37=0.15,stepM38=0.25,stepM39=0.35,stepM40=0.5 | dare-ties drop 0.4 | only experts | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/b686d7c276019adebc342df55536c7b206ae21a712fd61075cbf9b765d851f56",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/f872c8bf524fc1f345515f269a56bc4aae95a9a484cac5093a29aa5c7aef56e8",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/e9d60451921c1495c5737f5aa6ebcd876adf370eff442e5223209d51658f5fd2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/M36_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/fa3c2716dad756850afe300b426e674992b7de5c29f61a38c3ea0451d1b39d9a",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.5
+   ],
+   [
+    2,
+    3,
+    0.35
+   ],
+   [
+    3,
+    4,
+    0.25
+   ],
+   [
+    4,
+    5,
+    0.15
+   ],
+   [
+    5,
+    6,
+    0.1
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "sum",
+  "drop": 0.4,
+  "exclude": [
+   "^(?!.*mlp\\.experts\\.).*"
+  ]
+ }
+}

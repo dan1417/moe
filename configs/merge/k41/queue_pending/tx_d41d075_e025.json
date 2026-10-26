@@ -1,0 +1,41 @@
+{
+ "label": "tx_d41d075_e025",
+ "description": "TEXT: dense tensors at 0.75\u00b7D41, experts at 0.25\u00b7D41 + 0.15\u00b7P",
+ "method": "task-arith",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.75\u00b7D41 [experts: CK3=1, D41=0.25, P=0.15]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.75
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.75
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.75
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0
+   ]
+  }
+ ],
+ "priority": -47.9,
+ "main_limit": 800
+}

@@ -1,0 +1,40 @@
+{
+ "label": "K38_g0875_e020_d010_emb0",
+ "description": "\u03b3 + momentum (0.20, 0.10) with embeddings kept from the king",
+ "method": "momentum-shape",
+ "priority": 21,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "embed_tokens",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

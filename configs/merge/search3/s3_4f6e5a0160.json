@@ -1,0 +1,19 @@
+{
+ "label": "s3_4f6e5a0160",
+ "description": "KCODE_0c681d78 + dTX=1",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c2_r1/step-25",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_text_s2_33af3cb46e",
+   "coef": -1.0
+  }
+ ]
+}

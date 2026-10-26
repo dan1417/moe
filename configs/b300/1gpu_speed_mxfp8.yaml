@@ -1,0 +1,104 @@
+# 1×B300 C3 — FA4+MXFP8. Launch: bash scripts/train/run_b300_1gpu.sh --config configs/b300/1gpu_speed_mxfp8.yaml
+
+hardware:
+  gpus_per_node: 1
+  num_nodes: 1
+
+training:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 1
+  activation_checkpointing: true
+  activation_checkpointing_mode: selective
+  low_precision: mxfp8
+  low_precision_strict: true
+  fp8_training: true
+  total_steps: 5
+  smoke_steps: 0
+  log_every: 1
+  base_seed: 42
+  profile: mini
+  king_dir: ./pipeline_model
+  output_dir: ./checkpoints/b300_1gpu_speed_mxfp8
+  eval_batch_size: 1
+  attn_implementation: flash_attention_4
+  smoke_seq_len: 256
+  smoke_vocab_size: 152576
+  smoke_synthetic_data: true
+  smoke_patterned_data: true
+  smoke_pattern_period: 32
+
+scheduler:
+  type: wsd
+  warmup_steps: 1
+  stable_steps: 3
+  decay_steps: 1
+  lr_max: 3.0e-4
+  lr_min: 3.0e-5
+
+optimizer:
+  muon_lr: 0.02
+  muon_momentum: 0.95
+  muon_nesterov: true
+  muon_ns_steps: 5
+  muon_weight_decay: 0.05
+  muon_rms_scale: 0.2
+  adamw_lr: 3.0e-4
+  adamw_lr_min: 3.0e-5
+  adamw_betas: [0.9, 0.95]
+  adamw_eps: 1.0e-8
+  adamw_weight_decay: 0.1
+  adamw_bf16_states: true
+  router_lr_scale: 0.1
+  gradient_clip:
+    expert_ffn: 1.0
+    attention: 1.0
+    router: 0.5
+
+moe:
+  bias_update_speed: 0.001
+  z_loss_coeff: 1.0e-4
+  seq_aux_alpha: 1.0e-4
+  node_limit: 1
+  dispatch_overlap: false
+  delay_wgrad: false
+
+sparse_loco:
+  enabled: false
+
+parallelism:
+  fsdp: true
+  fsdp_cpu_offload: false
+
+compilation:
+  enabled: false
+
+packing:
+  enabled: false
+
+checkpoint_averaging:
+  enabled: false
+
+lora:
+  enabled: false
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+  target_modules: [qkv_proj, o_proj]
+  freeze_base: true
+  train_routers: true
+  save_full_checkpoint: false
+
+qk_norm:
+  enabled: false
+
+submission:
+  output_dir: ./submit_model
+  genesis_dir: ./genesis
+  safety_margin: 0.05
+
+data:
+  cache_dir: ./shard_cache
+  cache_max_gb: 50
+  num_workers: 0
+  persistent_workers: false
+  pin_memory: true

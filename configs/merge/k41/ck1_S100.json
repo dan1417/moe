@@ -1,0 +1,100 @@
+{
+ "label": "ck1_S100",
+ "description": "our CODE king + 1.0\u00b7S",
+ "method": "cross-merge",
+ "vec_spec": "0 + 1\u00b7CK1 + 1\u00b7CK3T - 0.25\u00b7OURS",
+ "vecs": {
+  "CK1": 1.0,
+  "CK3T": 1.0,
+  "OURS": -0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -0.75
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/submit/t1_d36050_pe015",
+   "coef": 0.75
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.00014,
+    "se": 4.31e-05,
+    "lcb": -0.000273,
+    "lcb30k": -0.000175
+   },
+   "code": {
+    "mu": 0.000303,
+    "se": 6.31e-05,
+    "lcb": 0.000108,
+    "lcb30k": 0.000259
+   },
+   "text": {
+    "mu": 0.000839,
+    "se": 0.0001318,
+    "lcb": 0.000431,
+    "lcb30k": 0.000756
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000384,
+   "lcb": -0.000646,
+   "se": 8.26e-05,
+   "sources": {
+    "code-reasoning": 8.1e-05,
+    "math-reasoning": 4e-05,
+    "pretrain-behaviors": -2.2e-05,
+    "sft-reasoning": -0.000535,
+    "txt360-v2": -0.001845
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001837,
+    "math": 0.001019,
+    "text": 0.000586
+   },
+   "CK3_b41": {
+    "code": -9.2e-05,
+    "math": -6.6e-05,
+    "text": -0.000531
+   },
+   "t1_d3605": {
+    "code": 0.000545,
+    "math": 0.000265,
+    "text": -0.000786
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:1d126380c31fb965694ddeafeb2b256facd310bdd4dc7465d761fce8e0c0cf5a",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 136.0,
+  "score_s": 254.1,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T23:58:04Z"
+ }
+}

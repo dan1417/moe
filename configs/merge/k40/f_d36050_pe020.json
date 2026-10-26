@@ -1,0 +1,67 @@
+{
+ "label": "f_d36050_pe020",
+ "description": "full 0.5\u00b7D36 + experts-only momentum 0.2\u00b7(#40\u2212#36)",
+ "method": "module-split",
+ "vecs": {
+  "D36": 0.5,
+  "P40_36": 0.0
+ },
+ "vec_overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "vecs": {
+    "D36": 0.5,
+    "P40_36": 0.2
+   }
+  }
+ ],
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/vec/d36_35q",
+   "coef": 0.5
+  },
+  {
+   "model": "/opt/teutonic/vec/p40_36q",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.5,
+    0.2
+   ]
+  }
+ ],
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": 0.00101,
+  "lcb": 0.000647,
+  "robust_lcb": null,
+  "win_rate": 0.65,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.896165,
+  "sources": {
+   "code-reasoning": 0.001148,
+   "math-reasoning": 0.000649,
+   "pretrain-behaviors": 0.001243,
+   "sft-reasoning": 0.001454,
+   "txt360-v2": 0.00102
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:7ecc7b0be6da2b3815fa8f54825ff011041e94185d066af99a0902a63324420c",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 278.0,
+  "score_s": 50.8,
+  "refilled_tensors": 33792,
+  "time": "2026-10-05T04:16:20Z"
+ }
+}

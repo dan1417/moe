@@ -1,0 +1,11 @@
+{
+ "label": "pub_0fc3f0d0ad",
+ "description": "raw: TX2 as is | TX2 = TEXT #2 teutonic-II-110B-A7B-5DALwjE4-98",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  }
+ ]
+}

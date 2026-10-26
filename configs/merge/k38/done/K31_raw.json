@@ -1,0 +1,14 @@
+{
+ "label": "K31_raw",
+ "description": "king #31 itself (branch point) vs #38 \u2014 sample calibration (chain says \u2248 \u22120.0138)",
+ "method": "raw-king",
+ "priority": 19,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": 1.0
+  }
+ ],
+ "overrides": []
+}

@@ -1,0 +1,19 @@
+{
+ "label": "slerp_kmath_ddd9e626_m1s175_050",
+ "description": "SLERP(KMATH_ddd9e626, our m1/step-175, t=0.5) per tensor",
+ "group": "kmath_ddd9e626",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

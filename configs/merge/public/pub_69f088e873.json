@@ -1,0 +1,15 @@
+{
+ "label": "pub_69f088e873",
+ "description": "probe: C10_S50 - 0.3\u00b7(TX4 - C10_S50) = away from (ExPO) TX4 | TX4 = TEXT #4 teutonic-II-110B-A7B-5DALwjE4-101",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.3
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": -0.3
+  }
+ ]
+}

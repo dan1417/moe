@@ -1,0 +1,62 @@
+{
+ "label": "rt_text_a",
+ "item": {
+  "kind": "plugin",
+  "module": "train_router41",
+  "label": "rt_text_a",
+  "recipe": "ck3_d41_025_pmom015",
+  "pool": "/data/teutonic/pools/text_train",
+  "steps": 600,
+  "batch": 2,
+  "lr": 2e-05,
+  "warmup": 20,
+  "val_n": 96,
+  "eval_every": 100,
+  "params": "router",
+  "attn": "eager",
+  "priority": -58,
+  "score_priority": -57,
+  "description": "ROUTER FINE-TUNE of the best TEXT recipe: 44 routers (34.6M params) trained 600 steps x 2 seqs on the text-competition pool, experts frozen, best-by-val snapshot"
+ },
+ "history": [
+  {
+   "step": 0,
+   "val": 1.1497436336552103
+  },
+  {
+   "step": 100,
+   "train": 1.2069461637735366,
+   "val": 1.1499947520593803
+  },
+  {
+   "step": 200,
+   "train": 1.153295626938343,
+   "val": 1.1504791813592117
+  },
+  {
+   "step": 300,
+   "train": 1.098453109562397,
+   "val": 1.1501563182100654
+  },
+  {
+   "step": 400,
+   "train": 1.1583606231212615,
+   "val": 1.1504233150432508
+  },
+  {
+   "step": 500,
+   "train": 1.1656685289740563,
+   "val": 1.1503259195014834
+  },
+  {
+   "step": 600,
+   "train": 1.158642421066761,
+   "val": 1.1503686290234327
+  }
+ ],
+ "best_step": 0,
+ "best_val": 1.1497436336552103,
+ "val0": 1.1497436336552103,
+ "seconds": 4312,
+ "out": "/data/teutonic/vec/routers/rt_text_a.safetensors"
+}

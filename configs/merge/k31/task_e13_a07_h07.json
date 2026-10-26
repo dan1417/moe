@@ -1,0 +1,44 @@
+{
+ "label": "task_e13_a07_h07",
+ "description": "#31u + CPT step experts x1.3, attn/head x0.7",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    1.3,
+    -1.3
+   ]
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.7,
+    -0.7
+   ]
+  },
+  {
+   "pattern": "^lm_head\\.|\\.shared_experts\\.",
+   "coefs": [
+    1.0,
+    0.7,
+    -0.7
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "label": "pub_31d0de67f1",
+ "description": "raw: M41 as is | M41 = MAIN #41 teutonic-II-110B-A7B-5DALwjE4-91",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 1.0
+  }
+ ]
+}

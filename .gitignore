@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venv-eval/
+.venv-cpt/
+venv/
+*.egg
+
+# Parity eval caches (samples, shards, losses, results) and downloaded models
+eval_cache/
+models/
+
+# Training artifacts (large; download locally)
+king/
+previous_king/
+genesis/
+checkpoints/
+submit_model/
+merge_eval_results/
+shard_cache/
+sequence_pool/
+sequence_pool_*/
+
+# Built mini king (rebuild: python scripts/data/prepare_pipeline_model.py)
+pipeline_model/
+pipeline_model_L*/
+
+# Monitor state
+.teutonic_monitor_state.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+wandb/
+
+# Routing-aware recipes carry per-expert coefficients (2 MB each); regenerate with scripts/merge/make_expert_recipe.py
+configs/merge/expertB_*.json
+configs/merge/u30w3_route_*.json
+
+# sweep31 work queue (transient)
+configs/merge/k31/queue/
+
+# k40 sweep queue (scored recipes are committed under configs/merge/k40/)
+configs/merge/k40/queue/
+
+# sweep41 transient queue (scored recipes are saved as configs/merge/k41/<label>.json)
+configs/merge/k41/queue/
+
+# miner CLI venv and per-hotkey state (manifest, registration; the credential is removed at ready)
+.venv-miner/
+.teutonic-miner/

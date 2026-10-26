@@ -1,0 +1,19 @@
+{
+ "label": "k43_o42_100",
+ "description": "#43 + 1.0 x our lineage since #42 (C1_FINAL - CK3)",
+ "group": "transplant",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": -1.0
+  }
+ ]
+}

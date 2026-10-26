@@ -1,0 +1,44 @@
+{
+ "label": "e1_a05_h05",
+ "description": "CPT step: experts x1, attention x0.5, head+shared x0.5",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    1.0,
+    -1.0
+   ]
+  },
+  {
+   "pattern": "\\.self_attn\\.",
+   "coefs": [
+    1.0,
+    0.5,
+    -0.5
+   ]
+  },
+  {
+   "pattern": "^lm_head\\.|\\.shared_experts\\.",
+   "coefs": [
+    1.0,
+    0.5,
+    -0.5
+   ]
+  }
+ ]
+}

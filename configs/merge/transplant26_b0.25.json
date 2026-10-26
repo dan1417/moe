@@ -1,0 +1,18 @@
+{
+ "label": "transplant26_b0.25",
+ "description": "29 + 0.25*(26-22): lineage-B (txt360 specialist) update onto #29",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:26",
+   "coef": 0.25
+  },
+  {
+   "model": "reign:22",
+   "coef": -0.25
+  }
+ ]
+}

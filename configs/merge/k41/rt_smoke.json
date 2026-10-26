@@ -1,0 +1,159 @@
+{
+ "label": "rt_smoke",
+ "description": "ROUTER FINE-TUNE of ck3_d41_025_pmom015: (?:\\.mlp\\.gate\\.weight$) (34.6M params) trained 6 steps x 2 seqs on text_train (lr 1e-05); val CE 1.15916 -> 1.15839",
+ "method": "router-ft",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 [experts: CK3=1, D41=0.25, P=0.15]",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    0.25,
+    -0.4,
+    0.15,
+    1.0
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "replacements": {
+  "model.layers.1.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.2.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.3.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.4.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.5.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.6.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.7.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.8.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.9.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.10.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.11.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.12.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.13.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.14.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.15.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.16.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.17.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.18.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.19.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.20.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.21.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.22.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.23.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.24.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.25.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.26.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.27.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.28.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.29.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.30.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.31.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.32.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.33.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.34.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.35.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.36.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.37.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.38.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.39.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.40.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.41.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.42.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.43.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors",
+  "model.layers.44.mlp.gate.weight": "/data/teutonic/vec/routers/rt_smoke.safetensors"
+ },
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000154,
+    "se": 5.32e-05,
+    "lcb": -0.000318,
+    "lcb30k": -0.000207
+   },
+   "code": {
+    "mu": 0.000179,
+    "se": 6.53e-05,
+    "lcb": -2.3e-05,
+    "lcb30k": 0.000128
+   },
+   "text": {
+    "mu": 0.002003,
+    "se": 0.0001972,
+    "lcb": 0.001394,
+    "lcb30k": 0.001883
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.000576,
+   "lcb": -0.000982,
+   "se": 0.0001255,
+   "sources": {
+    "code-reasoning": -0.000272,
+    "math-reasoning": -0.000373,
+    "pretrain-behaviors": -0.000719,
+    "sft-reasoning": -0.001284,
+    "txt360-v2": -0.000832
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001331,
+    "math": 0.000714,
+    "text": 0.002424
+   },
+   "CK3_b41": {
+    "code": -0.000598,
+    "math": -0.000371,
+    "text": 0.001306
+   },
+   "t1_d3605": {
+    "code": 3.9e-05,
+    "math": -4e-05,
+    "text": 0.001051
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:ad1bc20f8ed86fb51edfc1f37761ff3eba5a7b1b58e4869fa747375916906563",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 17.5,
+  "score_s": 255.9,
+  "refilled_tensors": 170,
+  "time": "2026-10-08T05:31:33Z"
+ }
+}

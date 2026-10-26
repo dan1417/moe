@@ -1,0 +1,97 @@
+{
+ "label": "s2_b7f264289f",
+ "description": "KTEXT_9a39afee + CK1D=0.25,DC1=0.5,dKC2=0.25,dKT2=0.25,dM1T=0.5,dM3=1,dMATH=0.5 | emr elect-max density 1",
+ "group": "search2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/7e4aa8238859533ac2cc63bc214e5d78e1113f59fe4c2c3a38211328ab4b08cd",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_m1",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m3/step-25",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.5
+   ],
+   [
+    3,
+    4,
+    0.5
+   ],
+   [
+    5,
+    6,
+    0.25
+   ],
+   [
+    7,
+    2,
+    0.25
+   ],
+   [
+    8,
+    2,
+    0.25
+   ],
+   [
+    9,
+    10,
+    0.5
+   ],
+   [
+    11,
+    9,
+    1.0
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "max"
+ }
+}

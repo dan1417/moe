@@ -1,0 +1,19 @@
+{
+ "label": "soup_kcode_0c681d78mom050_c1_050",
+ "description": "soup 0.5 x (KCODE_0c681d78 + 0.5 x its step since #43) + 0.5 x our final",
+ "group": "kcode_0c681d78",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KCODE_0c681d78_b41",
+   "coef": 0.75
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  }
+ ]
+}

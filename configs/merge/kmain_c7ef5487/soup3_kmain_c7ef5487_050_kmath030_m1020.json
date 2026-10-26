@@ -1,0 +1,19 @@
+{
+ "label": "soup3_kmain_c7ef5487_050_kmath030_m1020",
+ "description": "0.5 x KMAIN_c7ef5487 + 0.3 x KMATH_ddd9e626 + 0.2 x m1/step-175 (half the new king, half our best KMATH soup)",
+ "group": "kmain_c7ef5487",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 0.3
+  },
+  {
+   "model": "/data/teutonic/ckpt/main_upper_ema_m1/step-175",
+   "coef": 0.2
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "label": "soup_ktext_9a39afeemom050_c1_050",
+ "description": "soup 0.5 x (KTEXT_9a39afee + 0.5 x its step since #43) + 0.5 x our final",
+ "group": "ktext_9a39afee",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 0.75
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  }
+ ]
+}

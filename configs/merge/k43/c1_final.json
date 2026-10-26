@@ -1,0 +1,10 @@
+{
+ "label": "c1_final",
+ "description": "our 200-step text run (final) as is",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 1.0
+  }
+ ]
+}

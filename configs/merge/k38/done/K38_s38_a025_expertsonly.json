@@ -1,0 +1,33 @@
+{
+ "label": "K38_s38_a025_expertsonly",
+ "description": "#38 + 0.25\u00b7S38 on routed experts only",
+ "method": "custom",
+ "priority": 24,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.25
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.25
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.25,
+    -0.25
+   ]
+  },
+  {
+   "pattern": ".",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ]
+}

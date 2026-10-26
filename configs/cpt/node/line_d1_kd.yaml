@@ -1,0 +1,54 @@
+# Line D1: knowledge distillation on txt360 from MiMo-V2.5-Base (XiaomiMiMo/MiMo-V2.5-Base: identical tokenizer,
+# ~48T pretraining tokens). Alone the teacher is worse than our model on every source (1.238 vs 0.924 nats), but its
+# errors are nearly uncorrelated with ours: the 50/50 probability mixture is +0.109 nats better on txt360-v2 and the
+# per-source mixture +0.025 overall (2,048 val sequences) -- 95% of it on txt360. So txt360 sequences train on
+# CE(label) + lambda * soft-CE(teacher top-64) (optimum ~ mixture of the true distribution and the teacher), every
+# other source on plain CE; val stays the validator's pure CE.
+# Teacher targets: train.py --teacher-topk-out (24k txt360 sequences of the train pool, top-64 log-probs).
+king_dir: /mnt/ram/runs/line_c1/exports/step000150_ema   # C1 EMA@150 = +0.00244 vs king #30
+output_dir: /workspace/teutonic/runs/line_d1
+export_dir: /mnt/ram/runs/line_d1/exports
+export_keep: 2
+seed: 202
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 4.0e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.5}   # routed experts
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 3000
+  warmup_steps: 20
+  decay_steps: 150
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.99
+  every: 1
+data:
+  pool_dir: /workspace/teutonic/pools/train_div
+  val_dir: /workspace/teutonic/pools/val_div
+  val_n: 4096
+  king_val_losses: /workspace/teutonic/pools/val_div/king30_losses.npy
+  micro_batch: 16
+  eval_batch: 32
+  grad_accum: 4          # 8 ranks x 16 x 4 = 512 seqs = 1.05M tokens/step (128 of them teacher-labelled txt360)
+  seed: 202
+  kd_dir: /mnt/ram/kd/txt360_k64
+  kd_source: txt360-v2
+  kd_frac: 0.25          # 4 of 16 per micro-batch (eval share of txt360 is 0.22)
+  kd_lambda: 1.0
+log_every: 10
+eval_every: 50
+export_every: 100
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}

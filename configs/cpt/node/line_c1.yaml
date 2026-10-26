@@ -1,0 +1,53 @@
+# Line C1 (2026-09-25 pod #2): upper-layer CPT of the merged start body (touristAI/teutonic-II-110B-merge-k30u,
+# +0.0018 vs king #30) on a HIGH-DIVERSITY pool.
+# What changed vs lines A/A2/A3b (pod #1):
+#   * data: 1M sequences from 32k shards (block reads, scripts/data/build_diverse_pool.py) instead of ~2,200 sequences
+#     from each of 270 shards; shards are contiguous single-topic chunks, so the old pools trained on 270 topics.
+#   * val: 8,192 sequences from 8,440 distinct shards -> vs_king / vs_start are estimates of the expected eval gain
+#     (the old 27-shard val carried the same shard-level noise as a single validator draw).
+#   * 1M-token steps (mb 16 x accum 4) at 72k tok/s: chunked lm_head+CE, fused AdamW, GPU-resident EMA.
+#   * lr: dense 4e-6 (A2's 3e-6 at 524k tokens x sqrt(2) for the doubled batch), routed experts x0.5.
+# Controls: touch runs/line_c1/{EXPORT,COOLDOWN,STOP}; runs/line_c1/LR.json {"scale": s, "groups": {label: mult}}.
+king_dir: /dev/shm/teutonic/start
+output_dir: /workspace/teutonic/runs/line_c1
+export_dir: /mnt/ram/runs/line_c1/exports
+export_keep: 2
+seed: 101
+attention: flash_attention_4
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+  - '^model\.embed_tokens\.'
+  - '^model\.layers\.([0-9]|1[0-5])\.'
+optimizer:
+  lr: 4.0e-6
+  groups:
+    - {pattern: '\.mlp\.grouped\.', lr_mult: 0.5}   # routed experts (each sees ~1/32 of the tokens)
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  grad_clip: 1.0
+schedule:
+  total_steps: 3000      # cap (~3.1B tokens); expected to stop earlier via COOLDOWN
+  warmup_steps: 30
+  decay_steps: 150       # linear cooldown length (also used by the COOLDOWN trigger)
+  min_lr_ratio: 0.0
+ema:
+  enabled: true
+  decay: 0.99
+  every: 1
+data:
+  pool_dir: /workspace/teutonic/pools/train_div
+  val_dir: /workspace/teutonic/pools/val_div
+  val_n: 4096
+  king_val_losses: /workspace/teutonic/pools/val_div/king30_losses.npy   # king #30 on the same val sequences
+  micro_batch: 16
+  eval_batch: 32         # forward-only val passes
+  grad_accum: 4          # 8 ranks x 16 x 4 = 512 seqs = 1.05M tokens/step
+  seed: 101
+log_every: 10
+eval_every: 50
+export_every: 150        # EMA export (bf16, 220 GB on /mnt/ram)
+export_raw: false
+checkpoint: {every: 0, keep: 1, resume: false}

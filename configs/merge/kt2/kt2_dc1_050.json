@@ -1,0 +1,19 @@
+{
+ "label": "kt2_dc1_050",
+ "description": "KT2 + 0.5 x our training step",
+ "group": "kt2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.5
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_a7745d17833c",
+   "coef": -0.5
+  }
+ ]
+}

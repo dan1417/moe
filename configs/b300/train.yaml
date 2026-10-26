@@ -1,0 +1,144 @@
+# 8×B300 production CPT (canonical). Launch: CONFIG=configs/b300/train.yaml bash scripts/train/launch.sh
+
+hardware:
+  gpus_per_node: 8          # 8× B300 per node (HGX/DGX B300)
+  num_nodes: 1              # set to 2 and use launch.sh for multi-node SparseLoCo
+
+# ── Training ──────────────────────────────────────────
+training:
+  micro_batch_size: 4       # B300 288GB; 8×4×4×2048 ≈ 262K tokens/step
+  gradient_accumulation_steps: 4
+  activation_checkpointing: false   # off by default on B300; enable if OOM
+  activation_checkpointing_mode: selective  # selective=MLP/MoE only; full=whole layer
+  # Low precision (Transformer Engine on datacenter Blackwell sm_10x):
+  #   none | mxfp8 | nvfp4   (aliases: fp8→mxfp8, fp4→nvfp4)
+  low_precision: mxfp8
+  low_precision_strict: true
+  fp8_training: true        # legacy alias; ignored when low_precision is set
+  nvfp4_high_precision_layers: 4  # last N decoder layers stay BF16 under nvfp4
+  total_steps: 5000         # warmup + stable + decay
+  smoke_steps: 0            # if >0, cap training to this many steps (smoke validation)
+  log_every: 10
+  base_seed: 42
+  king_dir: ./king
+  output_dir: ./checkpoints
+  eval_batch_size: 12
+
+# ── WSD Schedule ──────────────────────────────────────
+scheduler:
+  type: wsd
+  warmup_steps: 200
+  stable_steps: 4000
+  decay_steps: 800
+  lr_max: 1.5e-5
+  lr_min: 1.5e-6
+
+# ── Optimizer ─────────────────────────────────────────
+optimizer:
+  muon_lr: 0.005
+  muon_momentum: 0.95
+  muon_nesterov: true
+  muon_ns_steps: 5
+  muon_weight_decay: 0.05     # Moonlight: weight decay crucial for Muon scalability (0.05–0.1)
+  muon_rms_scale: 0.2         # Moonlight RMS-matched scaling; null for Keller's original
+  adamw_lr: 1.5e-5
+  adamw_lr_min: 1.5e-6
+  adamw_betas: [0.9, 0.95]
+  adamw_eps: 1.0e-8
+  adamw_weight_decay: 0.1
+  adamw_bf16_states: true
+  router_lr_scale: 0.1
+  gradient_clip:
+    expert_ffn: 1.0
+    attention: 1.0
+    router: 0.5
+
+# ── MoE ───────────────────────────────────────────────
+# bias_update_speed: aux-loss-free load balancing on e_score_correction_bias (DeepSeek-V3)
+# z_loss_coeff: ST-MoE router logit scale penalty (live grads into gate)
+# seq_aux_alpha: complementary sequence-wise balance (tiny; DeepSeek-V3)
+# dispatch_overlap: DISABLED — custom EP path is unsafe; keep false (native MoE+FSDP)
+moe:
+  bias_update_speed: 0.001
+  z_loss_coeff: 1.0e-4
+  seq_aux_alpha: 1.0e-4
+  node_limit: 1
+  dispatch_overlap: false   # must stay false; enabling raises RuntimeError
+  delay_wgrad: false
+
+# ── SparseLoCo (multi-node) ──────────────────────────
+sparse_loco:
+  enabled: false          # single-node only; enable with hardware.num_nodes: 2
+  inner_steps: 200
+  sparsity_k: 0.01
+  quant_bits: 2
+  outer_lr: 0.7
+  outer_momentum: 0.9
+
+# ── Parallelism ───────────────────────────────────────
+parallelism:
+  fsdp: true
+  fsdp_cpu_offload: false   # not needed on B300; last-resort only
+
+# ── Compilation ───────────────────────────────────────
+compilation:
+  enabled: false                # torch.compile off by default (debuggability)
+  decoder_mode: reduce-overhead
+  attention_mode: max-autotune
+  compile_optimizer: false
+  cache_size_limit: 64
+
+# ── Packing ───────────────────────────────────────────
+# Packing is only supported with eager attention until FA4 varlen wiring is validated.
+packing:
+  enabled: false
+
+# ── Checkpoint averaging ──────────────────────────────
+checkpoint_averaging:
+  enabled: true
+  n_checkpoints: 5                # average last 5 stable checkpoints before decay
+  save_every_stable: 100
+  min_step_gap: 50
+
+# ── LoRA (smoke / adapter training; not full 110B pretrain) ──
+lora:
+  enabled: false
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+  target_modules: [qkv_proj, q_proj, k_proj, v_proj, o_proj]
+  freeze_base: true
+  train_routers: true
+  save_full_checkpoint: false
+
+# ── QK norm ─────────────────────────────────────────
+qk_norm:
+  enabled: false                  # ONLY enable if king has qk_norm=False and you accept eval risk
+
+# ── Submission / validation ───────────────────────────
+submission:
+  output_dir: ./submit_model       # teutonic-miner upload target directory
+  genesis_dir: ./genesis           # byte-identical contract reference
+  safety_margin: 0.05              # submit only if offline LCB > delta + margin (0.15 total)
+
+# ── Data ──────────────────────────────────────────────
+data:
+  cache_dir: ./shard_cache
+  cache_max_gb: 500
+  manifest_url: https://teutonic.ai/datasets/manifest.json
+  manifest_refresh_interval: 100
+  manifest_cache_ttl_sec: 60
+  num_workers: 4
+  prefetch_factor: 8
+  eval_prefetch_workers: 32   # parallel shard downloads for prepare_eval_cache.py
+  pin_memory: true
+  persistent_workers: true
+
+  # Precomputed per-run training “sequence pool” (faster + deterministic resume).
+  # When enabled, training will read from local files instead of infinite shard sampling.
+  sequence_pool:
+    enabled: false
+    pool_dir: ./sequence_pool
+    shards_per_source_range: [500, 2000]
+    seqs_per_shard_range: [100, 2000]
+    # sequence_pool_download_workers: 4

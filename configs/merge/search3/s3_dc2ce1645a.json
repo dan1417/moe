@@ -1,0 +1,19 @@
+{
+ "label": "s3_dc2ce1645a",
+ "description": "KMATH_ddd9e626 + dTX=1",
+ "group": "search3",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/KMATH_ddd9e626_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c2_r1/step-25",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/ckpt/start_text_s2_33af3cb46e",
+   "coef": -1.0
+  }
+ ]
+}

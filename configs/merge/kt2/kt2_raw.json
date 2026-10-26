@@ -1,0 +1,11 @@
+{
+ "label": "kt2_raw",
+ "description": "new king KT2 as is (parent K43; reference)",
+ "group": "kt2",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/8864c2796e4935f781d65a32aa46de4865adebbb3b51b7faa19a2cda101e173e",
+   "coef": 1.0
+  }
+ ]
+}

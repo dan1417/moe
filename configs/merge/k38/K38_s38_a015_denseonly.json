@@ -1,0 +1,22 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.15
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.15
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "label": "K38_s38_a015_denseonly"
+}

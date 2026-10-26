@@ -1,0 +1,14 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.15
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.15
+  }
+ ],
+ "overrides": [],
+ "label": "K38_s38_a015"
+}

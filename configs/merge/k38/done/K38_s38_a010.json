@@ -1,0 +1,18 @@
+{
+ "label": "K38_s38_a010",
+ "description": "#38 + 0.10\u00b7S38 = 1.1\u00b7#38 \u2212 0.1\u00b7#31 (momentum along the king's own 4-reign direction)",
+ "method": "custom",
+ "priority": 23,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": []
+}

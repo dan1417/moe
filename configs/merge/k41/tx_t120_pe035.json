@@ -1,0 +1,113 @@
+{
+ "label": "tx_t120_pe035",
+ "description": "TEXT target: 1.2\u00b7T + 0.5\u00b7D36 + experts momentum 0.35",
+ "method": "trajectory",
+ "vec_spec": "K41 + 1.2\u00b7T + 0.5\u00b7D36 [experts: T=1.2, D36=0.5, P=0.35]",
+ "vecs": {
+  "T": 1.2,
+  "D36": 0.5
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": -0.2
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.2
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 0.5
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    -0.2,
+    -0.35,
+    1.55,
+    0.5
+   ]
+  }
+ ],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001441,
+    "se": 0.000112,
+    "lcb": 0.001095,
+    "lcb30k": 0.001318
+   },
+   "code": {
+    "mu": -0.000917,
+    "se": 5.98e-05,
+    "lcb": -0.001102,
+    "lcb30k": -0.000964
+   },
+   "text": {
+    "mu": 0.000571,
+    "se": 0.0001957,
+    "lcb": -3.4e-05,
+    "lcb30k": 0.000451
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.001793,
+   "lcb": 0.001007,
+   "se": 0.0002991,
+   "sources": {
+    "code-reasoning": 0.001356,
+    "math-reasoning": 0.000655,
+    "pretrain-behaviors": 0.001843,
+    "sft-reasoning": 0.000736,
+    "txt360-v2": 0.003622
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.001699,
+    "math": 0.00067,
+    "text": 0.004784
+   },
+   "95ef7a26": {
+    "code": 0.000255,
+    "math": 0.000115,
+    "text": 0.000736
+   },
+   "t1_d3605": {
+    "code": -0.001037,
+    "math": -0.000638,
+    "text": -0.000637
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:4236a619ba832b94298b9c9f8d3f4130353722a66c7b27b2fd2f442e0761079a",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 298.3,
+  "score_s": 254.4,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T21:10:33Z"
+ }
+}

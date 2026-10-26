@@ -1,0 +1,35 @@
+{
+ "label": "pub_eff1c3f2e5",
+ "description": "MA2 + stepM45=0.5 | dare-ties drop 0.5 | only experts | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/414bcb8a1706ff321c5f00aee80ef8586907e44a304ec9de955e3c007407a6f2",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.5
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "sum",
+  "drop": 0.5,
+  "exclude": [
+   "^(?!.*mlp\\.experts\\.).*"
+  ]
+ }
+}

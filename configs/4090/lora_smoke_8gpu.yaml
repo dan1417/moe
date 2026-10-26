@@ -1,0 +1,88 @@
+hardware:
+  gpus_per_node: 8
+  num_nodes: 1
+training:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 1
+  activation_checkpointing: true
+  activation_checkpointing_mode: selective
+  low_precision: none
+  fp8_training: false
+  total_steps: 5
+  smoke_steps: 5
+  log_every: 1
+  base_seed: 42
+  profile: production
+  king_dir: ./pipeline_model
+  output_dir: ./checkpoints/pipeline_smoke_8gpu
+  eval_batch_size: 1
+  attn_implementation: eager
+  smoke_seq_len: 64
+  smoke_vocab_size: 152576
+  smoke_synthetic_data: true
+scheduler:
+  type: wsd
+  warmup_steps: 1
+  stable_steps: 3
+  decay_steps: 1
+  lr_max: 1.5e-05
+  lr_min: 1.5e-06
+optimizer:
+  muon_lr: 0.005
+  muon_momentum: 0.95
+  muon_nesterov: true
+  muon_ns_steps: 5
+  muon_weight_decay: 0.05
+  muon_rms_scale: 0.2
+  adamw_lr: 1.5e-05
+  adamw_lr_min: 1.5e-06
+  adamw_betas:
+  - 0.9
+  - 0.95
+  adamw_eps: 1.0e-08
+  adamw_weight_decay: 0.1
+  adamw_bf16_states: true
+  router_lr_scale: 0.1
+  gradient_clip:
+    expert_ffn: 1.0
+    attention: 1.0
+    router: 0.5
+moe:
+  bias_update_speed: 0.001
+  z_loss_coeff: 0.0001
+  seq_aux_alpha: 0.0001
+  node_limit: 1
+  dispatch_overlap: false
+  delay_wgrad: false
+sparse_loco:
+  enabled: false
+parallelism:
+  fsdp: true
+  fsdp_cpu_offload: false
+compilation:
+  enabled: false
+packing:
+  enabled: false
+checkpoint_averaging:
+  enabled: false
+lora:
+  enabled: true
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+  target_modules:
+  - qkv_proj
+  - o_proj
+  freeze_base: true
+  train_routers: true
+  save_full_checkpoint: false
+qk_norm:
+  enabled: false
+submission:
+  output_dir: ./submit_model
+  genesis_dir: ./genesis
+  safety_margin: 0.05
+data:
+  cache_dir: ./shard_cache
+  num_workers: 0
+  persistent_workers: false

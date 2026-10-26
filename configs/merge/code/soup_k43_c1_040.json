@@ -1,0 +1,15 @@
+{
+ "label": "soup_k43_c1_040",
+ "description": "0.6 x #43 + 0.4 x our final (SLERP t=0.4's linear twin)",
+ "group": "code",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": 0.6
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c1/final",
+   "coef": 0.4
+  }
+ ]
+}

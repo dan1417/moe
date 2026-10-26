@@ -1,0 +1,25 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": 1.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.5,
+  "beta": 0.25,
+  "exclude": [
+   "^(?!.*\\.mlp\\.experts\\.)"
+  ]
+ },
+ "label": "K38_s38ties_d050_e025"
+}

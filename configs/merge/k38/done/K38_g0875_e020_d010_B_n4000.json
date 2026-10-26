@@ -1,0 +1,34 @@
+{
+ "label": "K38_g0875_e020_d010_B_n4000",
+ "description": "shipped recipe on independent sample B, 4000 seqs",
+ "method": "momentum-shape",
+ "priority": 7,
+ "limit": 4000,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.2,
+    -0.2
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "sample": "tag:B"
+}

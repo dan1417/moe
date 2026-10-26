@@ -1,0 +1,24 @@
+{
+ "label": "bread_d0.5_drop0.1",
+ "description": "breadcrumbs: drop smallest 50% and largest 10% of (CPT-k30u)",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.5,
+  "beta": 1.0,
+  "top_drop": 0.1
+ }
+}

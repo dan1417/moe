@@ -1,0 +1,40 @@
+{
+ "label": "K_dm100",
+ "description": "#31u + 1.0\u00b7Dm (Dm = k30u \u2212 #30u: public-king merge 0.17\u00b7D26 + 0.13\u00b7D25)",
+ "method": "task-arith",
+ "vecs": {
+  "Dm": 1.0
+ },
+ "overrides": [],
+ "priority": 10,
+ "limit": 800,
+ "ship": {
+  "label": "K_dm100",
+  "description": "#31u + 1.0\u00b7Dm (Dm = k30u \u2212 #30u: public-king merge 0.17\u00b7D26 + 0.13\u00b7D25)",
+  "terms": [
+   {
+    "model": "/opt/teutonic/hf/king31u",
+    "coef": 1.0
+   },
+   {
+    "model": "/opt/teutonic/hf/k30u",
+    "coef": 1.0
+   },
+   {
+    "model": "/opt/teutonic/hf/king30u",
+    "coef": -1.0
+   }
+  ],
+  "overrides": []
+ },
+ "vec_specs": {
+  "Dm": [
+   "/opt/teutonic/hf/k30u",
+   "/opt/teutonic/hf/king30u"
+  ],
+  "S31": [
+   "/opt/teutonic/hf/king31u",
+   "/opt/teutonic/hf/king30u"
+  ]
+ }
+}

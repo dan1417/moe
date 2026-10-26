@@ -1,0 +1,19 @@
+{
+ "label": "pub_528f32d06f",
+ "description": "slerp(C10_S50, TX4, t=0.5) | TX4 = TEXT #4 teutonic-II-110B-A7B-5DALwjE4-101",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

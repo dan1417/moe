@@ -1,0 +1,43 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.1
+  },
+  {
+   "model": "/workspace/teutonic/models/king31",
+   "coef": -0.1
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "model\\.layers\\.([0-8])\\..*.mlp\\.experts\\.",
+   "coefs": [
+    1.1,
+    -0.1
+   ]
+  },
+  {
+   "pattern": "model\\.layers\\.([0-8])\\.mlp\\.experts\\.",
+   "coefs": [
+    1.1,
+    -0.1
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.experts\\.",
+   "coefs": [
+    1.25,
+    -0.25
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.gate\\.",
+   "coefs": [
+    1.0,
+    0.0
+   ]
+  }
+ ],
+ "label": "K38_g0875_e025u_d010"
+}

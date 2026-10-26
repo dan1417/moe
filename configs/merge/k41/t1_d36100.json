@@ -1,0 +1,94 @@
+{
+ "label": "t1_d36100",
+ "description": "T1 + 1.0\u00b7D36 (specialists weight text only 15%: map the D36 curve further out)",
+ "method": "task-arith",
+ "vec_spec": "K41 + 1\u00b7T + 1\u00b7D36",
+ "vecs": {
+  "T": 1.0,
+  "D36": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/d36_35q",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": 0.001552,
+    "se": 9.23e-05,
+    "lcb": 0.001267,
+    "lcb30k": 0.001461
+   },
+   "code": {
+    "mu": 0.002281,
+    "se": 0.0001103,
+    "lcb": 0.00194,
+    "lcb30k": 0.002184
+   },
+   "text": {
+    "mu": -0.000953,
+    "se": 0.000118,
+    "lcb": -0.001317,
+    "lcb30k": -0.001027
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": 0.00191,
+   "lcb": 0.001312,
+   "se": 0.000199,
+   "sources": {
+    "code-reasoning": 0.001714,
+    "math-reasoning": 0.001295,
+    "pretrain-behaviors": 0.002999,
+    "sft-reasoning": 0.002021,
+    "txt360-v2": 0.001229
+   }
+  },
+  "groups_vs": {
+   "1f1efb68": {
+    "code": 0.002507,
+    "math": 0.001182,
+    "text": 0.002324
+   },
+   "95ef7a26": {
+    "code": 0.001064,
+    "math": 0.000628,
+    "text": -0.001723
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "1f1efb68",
+   "math": "1f1efb68",
+   "code": "1f1efb68",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:f0bc0b79b7a906700081407460121588df79e81056c84c3e76ad94510129afc6",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 269.5,
+  "score_s": 254.6,
+  "refilled_tensors": 34234,
+  "time": "2026-10-07T18:35:50Z"
+ }
+}

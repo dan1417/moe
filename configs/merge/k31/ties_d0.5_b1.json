@@ -1,0 +1,23 @@
+{
+ "label": "ties_d0.5_b1",
+ "description": "TIES: keep top 50% of (CPT-k30u), scale 1",
+ "terms": [
+  {
+   "model": "/opt/teutonic/hf/king31u",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/cpt-ema150",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/k30u",
+   "coef": 0.0
+  }
+ ],
+ "mode": "ties",
+ "mode_args": {
+  "density": 0.5,
+  "beta": 1.0
+ }
+}

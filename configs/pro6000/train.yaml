@@ -1,0 +1,113 @@
+# RTX PRO 6000 Blackwell workstation (sm_120, 96 GB) — reduced profile.
+# MXFP8/NVFP4 TE recipes are gated to datacenter sm_10x; this profile stays BF16.
+# Full 110B pre-training is not viable here; use scripts/verify/smoke_train.py (LoRA).
+# Prefer configs/b300/train.yaml / train_config.yaml on 8×B300.
+
+hardware:
+  gpus_per_node: 8
+  num_nodes: 1
+
+training:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  activation_checkpointing: true
+  activation_checkpointing_mode: selective
+  low_precision: none
+  low_precision_strict: true
+  fp8_training: false
+  total_steps: 5000
+  log_every: 10
+  base_seed: 42
+  king_dir: ./king
+  output_dir: ./checkpoints
+  eval_batch_size: 4
+
+scheduler:
+  type: wsd
+  warmup_steps: 200
+  stable_steps: 4000
+  decay_steps: 800
+  lr_max: 1.5e-5
+  lr_min: 1.5e-6
+
+optimizer:
+  muon_lr: 0.005
+  muon_momentum: 0.95
+  muon_nesterov: true
+  muon_ns_steps: 5
+  muon_weight_decay: 0.05
+  muon_rms_scale: 0.2
+  adamw_lr: 1.5e-5
+  adamw_lr_min: 1.5e-6
+  adamw_betas: [0.9, 0.95]
+  adamw_eps: 1.0e-8
+  adamw_weight_decay: 0.1
+  adamw_bf16_states: true
+  router_lr_scale: 0.1
+  gradient_clip:
+    expert_ffn: 1.0
+    attention: 1.0
+    router: 0.5
+
+moe:
+  bias_update_speed: 0.001
+  z_loss_coeff: 1.0e-4
+  seq_aux_alpha: 1.0e-4
+  node_limit: 1
+  dispatch_overlap: false
+  delay_wgrad: false
+
+sparse_loco:
+  enabled: false
+
+parallelism:
+  fsdp: true
+  fsdp_cpu_offload: false
+
+compilation:
+  enabled: false
+
+packing:
+  enabled: false
+
+checkpoint_averaging:
+  enabled: true
+  n_checkpoints: 5
+  save_every_stable: 100
+  min_step_gap: 50
+
+lora:
+  enabled: false
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+  target_modules: [qkv_proj, q_proj, k_proj, v_proj, o_proj]
+  freeze_base: true
+  train_routers: true
+  save_full_checkpoint: false
+
+qk_norm:
+  enabled: false
+
+submission:
+  output_dir: ./submit_model
+  genesis_dir: ./genesis
+  safety_margin: 0.05
+
+data:
+  cache_dir: ./shard_cache
+  cache_max_gb: 500
+  manifest_url: https://teutonic.ai/datasets/manifest.json
+  manifest_refresh_interval: 100
+  manifest_cache_ttl_sec: 60
+  num_workers: 4
+  prefetch_factor: 8
+  eval_prefetch_workers: 32
+  pin_memory: true
+  persistent_workers: true
+
+  sequence_pool:
+    enabled: false
+    pool_dir: ./sequence_pool
+    shards_per_source_range: [500, 2000]
+    seqs_per_shard_range: [100, 2000]

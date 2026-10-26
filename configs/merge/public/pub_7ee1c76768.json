@@ -1,0 +1,19 @@
+{
+ "label": "pub_7ee1c76768",
+ "description": "slerp(TX6, MA2, t=0.5) | MA2 = MATH #2 teutonic-II-110B-A7B-5DALwjE4-104; TX6 = TEXT #6 teutonic-II-110B-A7B-5DALwjE4-105",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/c8b898279726098e49c6cc389ad10ced7ac882ce03429d85f503ee60d0949a6d",
+   "coef": 1.0
+  }
+ ],
+ "mode": "slerp",
+ "mode_args": {
+  "t": 0.5
+ }
+}

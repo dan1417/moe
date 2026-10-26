@@ -1,0 +1,15 @@
+{
+ "label": "pub_1a13439859",
+ "description": "probe: C10_S50 + 0.3\u00b7(C10C_S25 - C10_S50) = toward C10C_S25",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10c/step-25",
+   "coef": 0.3
+  }
+ ]
+}

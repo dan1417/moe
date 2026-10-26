@@ -1,0 +1,15 @@
+{
+ "label": "pub_16d0b12e36",
+ "description": "probe: C10_S50 + 0.3\u00b7(CD2 - C10_S50) = toward CD2 | CD2 = CODE #2 teutonic-II-110B-A7B-5DALwjE4-99",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 0.7
+  },
+  {
+   "model": "/data/teutonic/models/fa428e5e3565110a037a68d7ecde4b561909478f5936bd5af17e93c90c3ff61b",
+   "coef": 0.3
+  }
+ ]
+}

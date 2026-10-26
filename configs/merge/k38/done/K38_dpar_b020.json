@@ -1,0 +1,22 @@
+{
+ "label": "K38_dpar_b020",
+ "description": "#38 + 0.2\u00b7(D36c \u2212 D\u22a5): only the component of the sibling delta parallel to the king's own step (per tensor)",
+ "method": "custom",
+ "priority": 24,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c",
+   "coef": 0.2
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c_orth",
+   "coef": -0.2
+  }
+ ],
+ "overrides": []
+}

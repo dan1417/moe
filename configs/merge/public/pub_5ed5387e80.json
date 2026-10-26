@@ -1,0 +1,11 @@
+{
+ "label": "pub_5ed5387e80",
+ "description": "raw: M44 as is | M44 = MAIN #44 teutonic-II-110B-A7B-5DALwjE4-100",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/c7ef5487e633bf978d5d007332765ffeb5d5a0c3833fa30c7a4a408740e594ae",
+   "coef": 1.0
+  }
+ ]
+}

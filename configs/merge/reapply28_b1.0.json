@@ -1,0 +1,19 @@
+{
+ "label": "reapply28_b1.0",
+ "description": "29 + 1.0*(28-27)",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:28",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:27",
+   "coef": -1.0
+  }
+ ],
+ "overrides": []
+}

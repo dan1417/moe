@@ -1,0 +1,104 @@
+{
+ "label": "tx_d41_025_P4036_010",
+ "description": "TEXT: #42 + 0.25\u00b7(#41\u2212#40) + 0.10\u00b7(#40\u2212#36) all tensors (uses #36..#39)",
+ "method": "trajectory",
+ "vec_spec": "0 + 1\u00b7CK3 + 0.25\u00b7D41 + 0.1\u00b7P40_36",
+ "vecs": {
+  "CK3": 1.0,
+  "D41": 0.25,
+  "P40_36": 0.1
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.25
+  },
+  {
+   "model": "/data/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": -0.25
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/vec/p40_36q",
+   "coef": 0.1
+  }
+ ],
+ "overrides": [],
+ "main_limit": 800,
+ "result": {
+  "n": 2400,
+  "comps": {
+   "math": {
+    "mu": -0.000547,
+    "se": 4.93e-05,
+    "lcb": -0.000699,
+    "lcb30k": -0.000592
+   },
+   "code": {
+    "mu": -0.000288,
+    "se": 7e-05,
+    "lcb": -0.000505,
+    "lcb30k": -0.000339
+   },
+   "text": {
+    "mu": 0.00066,
+    "se": 0.0001664,
+    "lcb": 0.000146,
+    "lcb30k": 0.000558
+   }
+  },
+  "main": {
+   "n": 800,
+   "mu": -0.001099,
+   "lcb": -0.001439,
+   "se": 0.0001162,
+   "sources": {
+    "code-reasoning": -0.000485,
+    "math-reasoning": -0.000475,
+    "pretrain-behaviors": -0.001192,
+    "sft-reasoning": -0.001106,
+    "txt360-v2": -0.002254
+   }
+  },
+  "groups_vs": {
+   "95ef7a26": {
+    "code": 0.001082,
+    "math": 0.0006,
+    "text": 0.000582
+   },
+   "CK3_b41": {
+    "code": -0.000847,
+    "math": -0.000485,
+    "text": -0.000535
+   },
+   "t1_d3605": {
+    "code": -0.00021,
+    "math": -0.000153,
+    "text": -0.00079
+   }
+  },
+  "group_n": {
+   "code": 796,
+   "math": 809,
+   "text": 795
+  },
+  "kings": {
+   "main": "CK3_b41",
+   "math": "CK3_b41",
+   "code": "t1_d3605",
+   "text": "95ef7a26"
+  },
+  "sample": "ec50cbc7-cf035b467300fcca",
+  "main_sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:61b4a7a1f661eea0bb6ad0629ce31282a0605224be6be59109805828b025e8cb",
+  "batch": 8,
+  "attn": "fa4sim",
+  "build_s": 358.6,
+  "score_s": 258.2,
+  "refilled_tensors": 34234,
+  "time": "2026-10-08T04:38:02Z"
+ }
+}

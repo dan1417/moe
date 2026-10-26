@@ -1,0 +1,22 @@
+# End-to-end smoke test on 8×RTX 5090: 2-layer slice of the real king (layer 0 dense +
+# 1 MoE), eager attention. Exercises FSDP2 sharded load, grouped-expert autograd, fp32
+# master AdamW, EMA, validation, export. The sliced export is NOT a valid submission.
+king_dir: /opt/teutonic/models/3325dd0dc9e3090cd1c27d3ec8f90c2e4acf2c91b380ac515f3bda2ff76b401e
+output_dir: /opt/teutonic/runs/smoke
+n_layers: 2
+seed: 0
+attention: eager
+activation_checkpointing: true
+freeze:
+  - '\.mlp\.gate\.weight$'
+  - '\.mlp\.gate\.e_score_correction_bias$'
+optimizer: {lr: 1.0e-5, betas: [0.9, 0.95], eps: 1.0e-8, weight_decay: 0.0, grad_clip: 1.0}
+schedule: {total_steps: 12, warmup_steps: 2, decay_steps: 4, min_lr_ratio: 0.0}
+ema: {enabled: true, decay: 0.9, every: 2}
+data: {pool_dir: /opt/teutonic/pools/smoke, val_dir: /opt/teutonic/pools/smoke_val, val_n: 64, micro_batch: 1, grad_accum: 2, seed: 0}
+log_every: 1
+eval_every: 6
+export_every: 12
+export_raw: true
+checkpoint: {every: 6, keep: 1, resume: true}
+export_at_start: true

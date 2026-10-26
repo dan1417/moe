@@ -1,0 +1,14 @@
+{
+ "label": "K38_g0875",
+ "description": "king #38 with router bias b' = 0.875\u00b7(b \u2212 mean b)",
+ "method": "router-bias",
+ "priority": 15,
+ "limit": 800,
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38_g0875",
+   "coef": 1.0
+  }
+ ],
+ "overrides": []
+}

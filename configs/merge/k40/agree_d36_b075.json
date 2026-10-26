@@ -1,0 +1,48 @@
+{
+ "label": "agree_d36_b075",
+ "description": "#40 + 0.75\u00b7D36 where D36 agrees in sign with (#40 \u2212 #35)",
+ "method": "sign_agree",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "sign_agree",
+ "mode_args": {
+  "beta": 0.75
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": 0.000909,
+  "lcb": 0.000623,
+  "robust_lcb": null,
+  "win_rate": 0.6562,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.896266,
+  "sources": {
+   "code-reasoning": 0.001087,
+   "math-reasoning": 0.000765,
+   "pretrain-behaviors": 0.001426,
+   "sft-reasoning": 0.001558,
+   "txt360-v2": 0.000159
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:1b5cd89fc4df1787327abca9a0a57de972b42eef42123ca2c0e3430401e7bff3",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 247.3,
+  "score_s": 50.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T00:55:54Z"
+ }
+}

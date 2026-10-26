@@ -1,0 +1,35 @@
+{
+ "label": "pub_e6bfa10e8a",
+ "description": "TX6 + stepTX5=0.5 | dare-ties drop 0.5 | only experts | TX6 = TEXT #6 teutonic-II-110B-A7B-5DALwjE4-105",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/d4b5f12796bd3118a7eab1523716a96aeb7a8f660799b8233afd9466aab703fa",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/76d55249acbc4868d53e5c1260d53fa521ee643d1f0bb7f97811f61410e5814b",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  }
+ ],
+ "mode": "vec_ties",
+ "mode_args": {
+  "vecs": [
+   [
+    1,
+    2,
+    0.5
+   ]
+  ],
+  "lambda": 1.0,
+  "merge": "sum",
+  "drop": 0.5,
+  "exclude": [
+   "^(?!.*mlp\\.experts\\.).*"
+  ]
+ }
+}

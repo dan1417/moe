@@ -1,0 +1,15 @@
+{
+ "label": "pub_633eb7f940",
+ "description": "probe: C10_S50 - 0.3\u00b7(M43 - C10_S50) = away from (ExPO) M43 | M43 = MAIN #43 teutonic-II-110B-A7B-5DALwjE4-96",
+ "group": "public",
+ "terms": [
+  {
+   "model": "/data/teutonic/ckpt/text_upper_ema_c10/step-50",
+   "coef": 1.3
+  },
+  {
+   "model": "/data/teutonic/models/9b202f1afae9c3575cdf6a57a37326aeb0a8ab8704658e3b64224bee72c537da",
+   "coef": -0.3
+  }
+ ]
+}

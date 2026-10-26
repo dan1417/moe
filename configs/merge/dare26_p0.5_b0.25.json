@@ -1,0 +1,23 @@
+{
+ "label": "dare26_p0.5_b0.25",
+ "description": "DARE lineage-B step: 29 + 0.25*drop50%(26-22)/0.5",
+ "terms": [
+  {
+   "model": "reign:29",
+   "coef": 1.0
+  },
+  {
+   "model": "reign:26",
+   "coef": 0.0
+  },
+  {
+   "model": "reign:22",
+   "coef": 0.0
+  }
+ ],
+ "mode": "dare",
+ "mode_args": {
+  "drop": 0.5,
+  "beta": 0.25
+ }
+}

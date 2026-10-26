@@ -1,0 +1,49 @@
+{
+ "label": "dare_d36_p50_b050",
+ "description": "#40 + 0.5\u00b7DARE(D36, drop 0.5, rescale)",
+ "method": "dare",
+ "terms": [
+  {
+   "model": "/opt/teutonic/models/7deb3bb45ea1bfaf0f6da7be5412e0bb303f0ba047d9fb33abd2afb08007c36c",
+   "coef": 1.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r36_b40",
+   "coef": 0.0
+  },
+  {
+   "model": "/opt/teutonic/hf/r35_b40",
+   "coef": 0.0
+  }
+ ],
+ "mode": "dare",
+ "mode_args": {
+  "drop": 0.5,
+  "beta": 0.5
+ },
+ "limit": 800,
+ "result": {
+  "n": 800,
+  "mu_hat": 0.000533,
+  "lcb": 0.000257,
+  "robust_lcb": null,
+  "win_rate": 0.6238,
+  "avg_king_loss": 0.897175,
+  "avg_challenger_loss": 0.896642,
+  "sources": {
+   "code-reasoning": 0.00065,
+   "math-reasoning": 0.000642,
+   "pretrain-behaviors": 0.00124,
+   "sft-reasoning": 0.001047,
+   "txt360-v2": -0.000794
+  },
+  "sample": "e4a9f831-16160cb531a3faaa",
+  "model_id": "recipe:de3eca3a95d6782039f99611ef2b6754df95082433ae38b7a13878bee3c255b3",
+  "batch": 8,
+  "attn": "flash_attention_4",
+  "build_s": 256.3,
+  "score_s": 50.8,
+  "refilled_tensors": 34234,
+  "time": "2026-10-05T00:35:03Z"
+ }
+}

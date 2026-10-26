@@ -1,0 +1,27 @@
+{
+ "label": "ck3_U3T_100",
+ "description": "#42 + 1.0\u00b7(U3 \u2212 T1): U3's full delta moved onto the MAIN king",
+ "method": "transplant",
+ "vec_spec": "0 + 1\u00b7CK3 + 1\u00b7U3T",
+ "vecs": {
+  "CK3": 1.0,
+  "U3T": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": -1.0
+  },
+  {
+   "model": "/data/teutonic/models/CK3_b41",
+   "coef": 1.0
+  },
+  {
+   "model": "/data/teutonic/models/hf_myzxnk3nvdm6",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [],
+ "priority": -78.5,
+ "main_limit": 800
+}

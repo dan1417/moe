@@ -1,0 +1,18 @@
+{
+ "terms": [
+  {
+   "model": "/workspace/teutonic/models/king38",
+   "coef": 1.0
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c",
+   "coef": 0.2
+  },
+  {
+   "model": "/workspace/teutonic/deltas/d36_31c_orth",
+   "coef": -0.2
+  }
+ ],
+ "overrides": [],
+ "label": "K38_dpar_b020"
+}

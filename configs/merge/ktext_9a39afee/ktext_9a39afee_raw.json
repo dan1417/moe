@@ -1,0 +1,11 @@
+{
+ "label": "ktext_9a39afee_raw",
+ "description": "new king KTEXT_9a39afee as is (parent K43; reference)",
+ "group": "ktext_9a39afee",
+ "terms": [
+  {
+   "model": "/data/teutonic/models/9a39afee1928cb4c17863064e7d9e1ea5a677f86416048162037c3215a61cefd",
+   "coef": 1.0
+  }
+ ]
+}

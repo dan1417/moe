@@ -1,0 +1,37 @@
+{
+ "label": "tproj_gateup130",
+ "description": "#41 + T, expert gate/up_proj at 1.3\u00b7T",
+ "method": "proj-split",
+ "vec_spec": "K41 + 1\u00b7T [experts_gate: T=1.3] [experts_up: T=1.3]",
+ "vecs": {
+  "T": 1.0
+ },
+ "terms": [
+  {
+   "model": "/data/teutonic/models/1f1efb68b4a03d4b54304562597b34a71aa9b58d916757dfc83821df0b6d61c4",
+   "coef": 0.0
+  },
+  {
+   "model": "/data/teutonic/models/95ef7a26303df937d0dbcd2bbc2fe8d54b6acab124f552416d2988ae697091d0",
+   "coef": 1.0
+  }
+ ],
+ "overrides": [
+  {
+   "pattern": "\\.mlp\\.experts\\.\\d+\\.gate_proj",
+   "coefs": [
+    -0.3,
+    1.3
+   ]
+  },
+  {
+   "pattern": "\\.mlp\\.experts\\.\\d+\\.up_proj",
+   "coefs": [
+    -0.3,
+    1.3
+   ]
+  }
+ ],
+ "priority": 37,
+ "main_limit": 800
+}
